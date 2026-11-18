@@ -1,0 +1,14 @@
+{
+  "name": "patients-route",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check": "node scripts/check-journey.mjs",
+    "serve": "node scripts/serve.mjs",
+    "test": "node scripts/test-routes.mjs"
+  },
+  "devDependencies": {
+    "lighthouse": "^12.8.2",
+    "playwright": "^1.65.1"
+  }
+}

@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="hi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>मरीज़ का रास्ता · The Patient's Route</title>
+<meta name="description" content="रात में हार्ट अटैक, शहर से 80 किलोमीटर दूर। हर फ़ैसले में समय और पैसा लगता है। A heart attack at night, 80 km from the city. A bilingual choose-your-path story with sourced facts.">
+<meta name="theme-color" content="#F6EEE1">
+<link rel="canonical" href="./">
+<meta property="og:type" content="website">
+<meta property="og:title" content="मरीज़ का रास्ता · The Patient's Route">
+<meta property="og:description" content="रात में हार्ट अटैक, शहर से 80 किलोमीटर दूर। क्या आप रमेश को समय पर इलाज तक पहुँचा पाएँगे? A heart attack at night, 80 km from the city. Can you get Ramesh to treatment in time?">
+<meta property="og:image" content="og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="मरीज़ का रास्ता · The Patient's Route. रात में हार्ट अटैक, शहर से 80 किलोमीटर दूर।">
+<meta property="og:locale" content="hi_IN">
+<meta property="og:locale:alternate" content="en_IN">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="मरीज़ का रास्ता · The Patient's Route">
+<meta name="twitter:description" content="रात में हार्ट अटैक, शहर से 80 किलोमीटर दूर। A heart attack at night, 80 km from the city.">
+<meta name="twitter:image" content="og-image.png">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" href="journey.json" as="fetch" crossorigin="anonymous">
+<style>
+body{margin:0;background:#F6EEE1;color:#22190D;font-family:"Mukta",system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans Devanagari",sans-serif;font-size:18px;line-height:1.6}
+.skip{position:absolute;left:8px;top:-100px}.topbar{border-bottom:1px solid #E4D6C1}.topbar-in{max-width:640px;margin:0 auto;padding:6px 16px;min-height:56px;display:flex;align-items:center;justify-content:space-between}
+.brand{font-size:18px;padding-top:4px}.screen{max-width:640px;margin:0 auto;padding:20px 16px 32px;min-height:calc(100vh - 57px);box-sizing:border-box}[hidden]{display:none!important}
+.bigtitle{font-family:"Tiro Devanagari Hindi","Mukta",Georgia,serif;font-weight:400;font-size:38px;line-height:1.3;margin:12px 0 8px}.bigtitle .sub{display:block;font-size:22px;color:#5C5145}
+.lead{font-size:19px;color:#5C5145}.stack{display:flex;flex-direction:column;gap:12px;margin:20px 0}
+.btn{display:flex;align-items:center;justify-content:center;min-height:64px;border-radius:14px;border:2px solid #22190D;background:#FFFDF8;color:#22190D;font-size:24px;font-weight:600;text-decoration:none}
+.foot{border-top:1px solid #E4D6C1}.foot-in{max-width:640px;margin:0 auto;padding:10px 16px 18px}.foot a{color:#B8431F;font-weight:700;display:inline-flex;min-height:48px;align-items:center}
+dialog:not([open]){display:none}
+</style>
+<link rel="stylesheet" href="styles.css" id="css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="styles.css"></noscript>
+<script src="app.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#screen" id="skip">कहानी पर जाएँ · Skip to story</a>
+<header class="topbar">
+  <div class="topbar-in">
+    <span class="brand" id="brand">मरीज़ का रास्ता</span>
+    <div class="langtoggle" role="group" aria-label="भाषा · Language" id="langtoggle" hidden>
+      <button type="button" data-lang="hi" lang="hi">हिं</button>
+      <button type="button" data-lang="en" lang="en">EN</button>
+    </div>
+  </div>
+</header>
+<main id="screen" class="screen" aria-live="polite" tabindex="-1">
+  <section class="langpick" id="static-lang">
+    <h1 class="bigtitle"><span lang="hi">मरीज़ का रास्ता</span><span class="sub" lang="en">The Patient's Route</span></h1>
+    <p class="lead"><span lang="hi">अपनी भाषा चुनें</span> · <span lang="en">Choose your language</span></p>
+    <div class="stack">
+      <a class="btn btn-lang" href="?lang=hi" lang="hi" data-lang="hi">हिंदी</a>
+      <a class="btn btn-lang" href="?lang=en" lang="en" data-lang="en">English</a>
+    </div>
+  </section>
+</main>
+<footer class="foot" id="foot">
+  <div class="foot-in">
+    <a class="foot-emerg" href="tel:108">आपातकाल · Emergency: 108</a>
+  </div>
+</footer>
+<dialog class="sheet" id="sheet" aria-labelledby="sheet-title">
+  <div class="sheet-in">
+    <h2 id="sheet-title" class="sheet-title"></h2>
+    <p id="sheet-cite" class="sheet-cite"></p>
+    <p id="sheet-period" class="muted"></p>
+    <p id="sheet-link-wrap"><a id="sheet-link" href="#" target="_blank" rel="noopener noreferrer"></a></p>
+    <button type="button" class="btn btn-secondary" id="sheet-close"></button>
+  </div>
+</dialog>
+<script>
+(function(){var m=/[?&]lang=(hi|en)\b/.exec(location.search);if(!m&&!location.hash)return;var l=m?m[1]:'hi';document.documentElement.lang=l;var s=document.getElementById('static-lang');s.innerHTML='<h1 class="bigtitle">'+(l==='en'?"The Patient's Route":'मरीज़ का रास्ता')+'</h1><p class="lead">'+(l==='en'?'Loading the story':'कहानी लोड हो रही है')+'</p>';document.getElementById('screen').setAttribute('aria-busy','true');})();
+</script>
+<noscript><p class="noscript" lang="hi">यह कहानी चलाने के लिए JavaScript चालू करें।</p><p class="noscript" lang="en">Please turn on JavaScript to play this story.</p></noscript>
+</body>
+</html>

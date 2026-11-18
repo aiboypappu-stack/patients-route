@@ -1,0 +1,1773 @@
+{
+  "meta": {
+    "version": "1.1-draft",
+    "updated": "2026-11-18",
+    "title": {
+      "en": "The Patient's Route",
+      "hi": "मरीज़ का रास्ता"
+    },
+    "subtitle": {
+      "en": "A heart attack at night, 80 km from the city. Every choice costs time and money. Your choices decide how Ramesh's night ends.",
+      "hi": "रात में हार्ट अटैक, शहर से 80 किलोमीटर दूर। हर फ़ैसले में समय और पैसा लगता है। रमेश की रात कैसे ख़त्म होगी, यह आपके फ़ैसले तय करेंगे।"
+    },
+    "byline": {
+      "en": "Beyond Metros · Dr Parth D. Bhasin",
+      "hi": "Beyond Metros · डॉ. पार्थ डी. भसीन"
+    },
+    "emergency": {
+      "en": "If someone near you has chest pain right now, stop reading. Call 108 (or 112) for an ambulance.",
+      "hi": "अगर अभी किसी के सीने में दर्द है, तो पढ़ना बंद करें। एंबुलेंस के लिए 108 (या 112) पर कॉल करें।"
+    },
+    "fiction_note": {
+      "en": "Ramesh, his family and the village of Kesarpura are fictional. The region, distances, costs and medical facts are real and sourced. Tap any number to see where it comes from.",
+      "hi": "रमेश, उसका परिवार और केसरपुरा गाँव काल्पनिक हैं। इलाक़ा, दूरियाँ, ख़र्च और चिकित्सा से जुड़े तथ्य असली हैं और उनके स्रोत दिए गए हैं। किसी भी आँकड़े पर टैप करके उसका स्रोत देखें।"
+    },
+    "disclaimer": {
+      "en": "This is a public education story, not medical advice. In an emergency, follow the advice of the 108 call-taker and the treating doctor.",
+      "hi": "यह जन-जागरूकता के लिए एक कहानी है, चिकित्सा सलाह नहीं। आपात स्थिति में 108 पर बात करने वाले और इलाज करने वाले डॉक्टर की सलाह मानें।"
+    },
+    "wage_basis": {
+      "daily_wage_inr": 478,
+      "fact": "F32",
+      "en": "Wages are shown as days of work at Madhya Pradesh's minimum wage for unskilled work (about ₹478 a day in 2026).",
+      "hi": "मज़दूरी को मध्य प्रदेश की अकुशल श्रमिक न्यूनतम मज़दूरी (2026 में लगभग ₹478 प्रतिदिन) के दिनों में दिखाया गया है।"
+    }
+  },
+  "start": "card",
+  "nodes": {
+    "card": {
+      "clock_min": null,
+      "scene": {
+        "en": "Before the night begins",
+        "hi": "रात शुरू होने से पहले"
+      },
+      "text": {
+        "en": "Ramesh is 52. He farms two bighas of wheat and mustard in Kesarpura, a village in Bhind district, about 80 km by road from Gwalior. He lives with his wife Kamla and their son Sonu, who is 19.\n\nOne question first, because it will matter later: does the family have an Ayushman card?",
+        "hi": "रमेश 52 साल का है। वह भिंड ज़िले के केसरपुरा गाँव में दो बीघा ज़मीन पर गेहूँ और सरसों उगाता है। गाँव से ग्वालियर सड़क के रास्ते लगभग 80 किलोमीटर है। वह पत्नी कमला और 19 साल के बेटे सोनू के साथ रहता है।\n\nपहले एक सवाल, क्योंकि आगे इसका असर पड़ेगा: क्या परिवार के पास आयुष्मान कार्ड है?"
+      },
+      "facts": [
+        {
+          "en": "Ayushman Bharat (PM-JAY) covers up to ₹5 lakh of hospital treatment per family per year. Under 70, a family must be on the eligible list.",
+          "hi": "आयुष्मान भारत (PM-JAY) हर परिवार को साल में ₹5 लाख तक के अस्पताल इलाज का कवर देता है। 70 साल से कम उम्र में परिवार का नाम पात्रता सूची में होना ज़रूरी है।",
+          "refs": [
+            "F01",
+            "F03"
+          ]
+        }
+      ],
+      "choices": [
+        {
+          "label": {
+            "en": "Yes, they have a card",
+            "hi": "हाँ, कार्ड है"
+          },
+          "set": {
+            "card": true
+          },
+          "next": "symptoms"
+        },
+        {
+          "label": {
+            "en": "No card",
+            "hi": "कार्ड नहीं है"
+          },
+          "set": {
+            "card": false
+          },
+          "next": "symptoms"
+        }
+      ]
+    },
+    "symptoms": {
+      "clock_min": 0,
+      "clock_label": {
+        "en": "11:40 pm",
+        "hi": "रात 11:40"
+      },
+      "scene": {
+        "en": "The pain",
+        "hi": "दर्द"
+      },
+      "text": {
+        "en": "Ramesh wakes with a heavy pressure in the middle of his chest, as if someone is sitting on it. It spreads to his left arm and jaw. He is sweating though the night is cold, and he feels sick.\n\n\"It's gas,\" he tells Kamla. \"The dinner was heavy. I'll be fine by morning.\"",
+        "hi": "रमेश की नींद सीने के बीच में भारी दबाव से खुलती है, जैसे कोई सीने पर बैठा हो। दर्द बाएँ हाथ और जबड़े तक फैल रहा है। रात ठंडी है, फिर भी उसे पसीना आ रहा है और जी मिचला रहा है।\n\n\"गैस है,\" वह कमला से कहता है। \"खाना भारी था। सुबह तक ठीक हो जाऊँगा।\""
+      },
+      "facts": [
+        {
+          "en": "These are the classic signs of a heart attack: chest pressure that spreads to the arm, jaw or upper stomach, with sweating, breathlessness or nausea.",
+          "hi": "ये हार्ट अटैक के आम लक्षण हैं: सीने में दबाव जो हाथ, जबड़े या पेट के ऊपरी हिस्से तक फैले, साथ में पसीना, साँस फूलना या जी मिचलाना।",
+          "refs": [
+            "C23"
+          ]
+        },
+        {
+          "en": "In one hospital study, 65 of 100 heart-attack patients first thought it was gas, muscle pain or anxiety. Half blamed gas.",
+          "hi": "एक अस्पताल के अध्ययन में, हार्ट अटैक के 100 में से 65 मरीज़ों ने पहले इसे गैस, मांसपेशियों का दर्द या घबराहट समझा। आधे लोगों ने इसे गैस माना।",
+          "refs": [
+            "C11"
+          ]
+        }
+      ],
+      "choices": [
+        {
+          "label": {
+            "en": "Kamla calls 108 for an ambulance",
+            "hi": "कमला एंबुलेंस के लिए 108 पर कॉल करती है"
+          },
+          "next": "amb108"
+        },
+        {
+          "label": {
+            "en": "Sonu wakes the neighbour, who has a car",
+            "hi": "सोनू पड़ोसी को जगाता है, जिसके पास गाड़ी है"
+          },
+          "next": "neighbour"
+        },
+        {
+          "label": {
+            "en": "Give him an antacid and wait for morning",
+            "hi": "गैस की दवा देकर सुबह का इंतज़ार करें"
+          },
+          "next": "wait"
+        }
+      ]
+    },
+    "amb108": {
+      "clock_min": 40,
+      "clock_label": {
+        "en": "12:20 am",
+        "hi": "रात 12:20"
+      },
+      "scene": {
+        "en": "The ambulance",
+        "hi": "एंबुलेंस"
+      },
+      "text": {
+        "en": "The call is free. The ambulance reaches Kesarpura about 40 minutes after the pain began. A trained attendant helps Ramesh lie down and gives him oxygen on the way.\n\nThe ambulance will take him to the nearest community health centre (CHC), 12 km away.",
+        "hi": "कॉल मुफ़्त है। दर्द शुरू होने के लगभग 40 मिनट बाद एंबुलेंस केसरपुरा पहुँचती है। प्रशिक्षित कर्मचारी रमेश को लिटाता है और रास्ते में ऑक्सीजन देता है।\n\nएंबुलेंस उसे 12 किलोमीटर दूर सबसे नज़दीकी सामुदायिक स्वास्थ्य केंद्र (CHC) ले जाएगी।"
+      },
+      "facts": [
+        {
+          "en": "The 108 ambulance is free. The state government says rural ambulances arrive in 25 minutes on average. The earlier contract allowed 40.",
+          "hi": "108 एंबुलेंस मुफ़्त है। राज्य सरकार के अनुसार ग्रामीण इलाक़ों में एंबुलेंस औसतन 25 मिनट में पहुँचती है। पिछले अनुबंध में 40 मिनट की सीमा थी।",
+          "refs": [
+            "T01",
+            "T03",
+            "T04"
+          ]
+        },
+        {
+          "en": "Single reported cases in the region describe waits of 45 minutes, over an hour, and 2 hours, and one ambulance with a flat tyre and no spare.",
+          "hi": "इस इलाक़े से आई कुछ अलग-अलग ख़बरों में 45 मिनट, एक घंटे से ज़्यादा और 2 घंटे तक के इंतज़ार की बात है, और एक एंबुलेंस का टायर पंचर हुआ जिसमें स्टेपनी नहीं थी।",
+          "refs": [
+            "T10",
+            "T11",
+            "T12"
+          ],
+          "kind": "reported_cases"
+        },
+        {
+          "en": "Guidelines advise chewing an aspirin while help is on the way, unless the person is allergic to it. Ask the 108 call-taker.",
+          "hi": "दिशानिर्देशों के अनुसार मदद आने तक एक एस्पिरिन चबाकर खानी चाहिए, अगर उससे एलर्जी न हो। 108 पर बात करने वाले से पूछें।",
+          "refs": [
+            "C20",
+            "C22"
+          ]
+        }
+      ],
+      "choices": [
+        {
+          "label": {
+            "en": "Continue to the health centre",
+            "hi": "स्वास्थ्य केंद्र चलें"
+          },
+          "next": "chc"
+        }
+      ]
+    },
+    "chc": {
+      "clock_min": 75,
+      "clock_label": {
+        "en": "12:55 am",
+        "hi": "रात 12:55"
+      },
+      "scene": {
+        "en": "The health centre",
+        "hi": "स्वास्थ्य केंद्र"
+      },
+      "text": {
+        "en": "The doctor on night duty records an ECG. It shows a major heart attack: an artery to the heart is blocked.\n\nThe centre has no clot-dissolving injection tonight. The doctor writes a referral. Where should they go?",
+        "hi": "रात की ड्यूटी वाले डॉक्टर ECG करते हैं। उसमें बड़ा हार्ट अटैक दिखता है: दिल तक ख़ून ले जाने वाली एक नस बंद है।\n\nआज रात केंद्र में थक्का घोलने वाला इंजेक्शन नहीं है। डॉक्टर रेफ़र कर देते हैं। अब कहाँ जाएँ?"
+      },
+      "facts": [
+        {
+          "en": "National guidelines say a CHC should be able to do an ECG and, with a specialist's advice by phone, give the clot-dissolving injection.",
+          "hi": "राष्ट्रीय दिशानिर्देशों के अनुसार CHC में ECG होना चाहिए और फ़ोन पर विशेषज्ञ की सलाह से थक्का घोलने वाला इंजेक्शन दिया जा सकता है।",
+          "refs": [
+            "T06"
+          ]
+        },
+        {
+          "en": "Neighbouring Uttar Pradesh gives this injection free at health centres through a statewide programme. We found no such programme in Madhya Pradesh.",
+          "hi": "पड़ोसी उत्तर प्रदेश में एक राज्यव्यापी कार्यक्रम के तहत यह इंजेक्शन स्वास्थ्य केंद्रों पर मुफ़्त दिया जाता है। मध्य प्रदेश में हमें ऐसा कोई कार्यक्रम नहीं मिला।",
+          "refs": [
+            "T08",
+            "T07"
+          ]
+        }
+      ],
+      "choices": [
+        {
+          "label": {
+            "en": "District hospital in Bhind (25 km)",
+            "hi": "भिंड ज़िला अस्पताल (25 किमी)"
+          },
+          "next": "dh_early"
+        },
+        {
+          "label": {
+            "en": "Straight to Gwalior for angioplasty (80 km)",
+            "hi": "एंजियोप्लास्टी के लिए सीधे ग्वालियर (80 किमी)"
+          },
+          "next": "gwalior_pci"
+        }
+      ]
+    },
+    "neighbour": {
+      "clock_min": 30,
+      "clock_label": {
+        "en": "12:10 am",
+        "hi": "रात 12:10"
+      },
+      "scene": {
+        "en": "The neighbour's car",
+        "hi": "पड़ोसी की गाड़ी"
+      },
+      "text": {
+        "en": "The neighbour is ready in half an hour. Ramesh sits in the back seat, holding his chest. There is no oxygen and no one who can read his heart on the way.\n\nThe neighbour asks: where to?",
+        "hi": "पड़ोसी आधे घंटे में तैयार हो जाता है। रमेश सीना पकड़े पीछे की सीट पर बैठा है। रास्ते में न ऑक्सीजन है, न दिल की जाँच करने वाला कोई।\n\nपड़ोसी पूछता है: कहाँ चलें?"
+      },
+      "facts": [
+        {
+          "en": "Government guidelines say a suspected heart attack patient should not be sent by friends or relatives. An ambulance is safer.",
+          "hi": "सरकारी दिशानिर्देश कहते हैं कि हार्ट अटैक के संदिग्ध मरीज़ को दोस्तों या रिश्तेदारों के साथ नहीं भेजना चाहिए। एंबुलेंस ज़्यादा सुरक्षित है।",
+          "refs": [
+            "C24"
+          ]
+        },
+        {
+          "en": "In one study, the drive to hospital took 82 minutes on average by ambulance and 130 minutes by other vehicles.",
+          "hi": "एक अध्ययन में अस्पताल तक पहुँचने में एंबुलेंस से औसतन 82 मिनट और दूसरी गाड़ियों से 130 मिनट लगे।",
+          "refs": [
+            "T33"
+          ]
+        }
+      ],
+      "choices": [
+        {
+          "label": {
+            "en": "District hospital in Bhind (35 km)",
+            "hi": "भिंड ज़िला अस्पताल (35 किमी)"
+          },
+          "next": "dh_neighbour"
+        },
+        {
+          "label": {
+            "en": "Straight to Gwalior (90 km)",
+            "hi": "सीधे ग्वालियर (90 किमी)"
+          },
+          "next": "gwalior_car"
+        }
+      ]
+    },
+    "dh_early": {
+      "clock_min": 120,
+      "clock_label": {
+        "en": "1:40 am",
+        "hi": "रात 1:40"
+      },
+      "scene": {
+        "en": "The district hospital",
+        "hi": "ज़िला अस्पताल"
+      },
+      "text": {
+        "en": "Two hours after the pain began, Ramesh reaches the district hospital. Tonight the injection is in stock. Within 20 minutes the doctor gives it: one dose into a vein, to dissolve the clot.\n\nThe pain begins to ease. He still needs a test of his heart's arteries in Gwalior within the next day.",
+        "hi": "दर्द शुरू होने के दो घंटे बाद रमेश ज़िला अस्पताल पहुँचता है। आज रात इंजेक्शन उपलब्ध है। 20 मिनट के अंदर डॉक्टर नस में एक ख़ुराक देते हैं, ताकि थक्का घुल जाए।\n\nदर्द कम होने लगता है। फिर भी अगले एक दिन के अंदर ग्वालियर में उसकी दिल की नसों की जाँच ज़रूरी है।"
+      },
+      "facts": [
+        {
+          "en": "Time matters most. Of 1,000 people given a clot-dissolving drug within 1 hour, about 65 more survive. At 2 to 3 hours, about 26 more.",
+          "hi": "समय सबसे अहम है। थक्का घोलने वाली दवा पहले 1 घंटे में मिलने पर हर 1,000 में से लगभग 65 और लोग बचते हैं। 2 से 3 घंटे पर लगभग 26 और।",
+          "refs": [
+            "C17"
+          ],
+          "kind": "golden_hour"
+        },
+        {
+          "en": "After the injection, guidelines advise an angiogram (a test of the heart's arteries) 3 to 24 hours later.",
+          "hi": "इंजेक्शन के बाद दिशानिर्देश 3 से 24 घंटे के अंदर एंजियोग्राम (दिल की नसों की जाँच) की सलाह देते हैं।",
+          "refs": [
+            "C25"
+          ]
+        },
+        {
+          "en": "Whether a district hospital has this injection at night is not guaranteed. We could not confirm stock levels in this region.",
+          "hi": "रात में ज़िला अस्पताल में यह इंजेक्शन होगा ही, यह तय नहीं है। इस इलाक़े में इसकी उपलब्धता की पुष्टि हम नहीं कर पाए।",
+          "refs": [
+            "T21"
+          ],
+          "kind": "caveat"
+        }
+      ],
+      "choices": [
+        {
+          "label": {
+            "en": "Transfer to Gwalior by ambulance",
+            "hi": "एंबुलेंस से ग्वालियर भेजें"
+          },
+          "set": {
+            "path": "early_lysis"
+          },
+          "next": "gwalior_hospital"
+        }
+      ]
+    },
+    "dh_neighbour": {
+      "clock_min": 95,
+      "clock_label": {
+        "en": "1:15 am",
+        "hi": "रात 1:15"
+      },
+      "scene": {
+        "en": "The district hospital",
+        "hi": "ज़िला अस्पताल"
+      },
+      "text": {
+        "en": "The car reaches the district hospital about an hour and a half after the pain began. The ECG shows a major heart attack. Tonight the clot-dissolving injection is in stock, and the doctor gives it within 20 minutes.\n\nThe pain begins to ease. He will need a test of his heart's arteries in Gwalior within the next day.",
+        "hi": "दर्द शुरू होने के लगभग डेढ़ घंटे बाद गाड़ी ज़िला अस्पताल पहुँचती है। ECG में बड़ा हार्ट अटैक दिखता है। आज रात थक्का घोलने वाला इंजेक्शन उपलब्ध है, और डॉक्टर 20 मिनट में दे देते हैं।\n\nदर्द कम होने लगता है। अगले एक दिन के अंदर ग्वालियर में दिल की नसों की जाँच ज़रूरी है।"
+      },
+      "facts": [
+        {
+          "en": "Of 1,000 people given a clot-dissolving drug within 1 to 2 hours, about 37 more survive than without it.",
+          "hi": "1 से 2 घंटे के अंदर थक्का घोलने वाली दवा मिलने पर हर 1,000 में से लगभग 37 और लोग बचते हैं।",
+          "refs": [
+            "C17"
+          ],
+          "kind": "golden_hour"
+        },
+        {
+          "en": "Going first to the nearest hospital that can give the injection, then moving on for an angiogram, is a recognised approach when angioplasty is far away.",
+          "hi": "जब एंजियोप्लास्टी दूर हो, तो पहले सबसे नज़दीकी इंजेक्शन देने वाले अस्पताल जाना और फिर एंजियोग्राम के लिए आगे जाना, एक मान्य तरीक़ा है।",
+          "refs": [
+            "C25",
+            "C27"
+          ]
+        }
+      ],
+      "choices": [
+        {
+          "label": {
+            "en": "Transfer to Gwalior by ambulance",
+            "hi": "एंबुलेंस से ग्वालियर भेजें"
+          },
+          "set": {
+            "path": "early_lysis"
+          },
+          "next": "gwalior_hospital"
+        }
+      ]
+    },
+    "gwalior_pci": {
+      "clock_min": 210,
+      "clock_label": {
+        "en": "3:10 am",
+        "hi": "रात 3:10"
+      },
+      "scene": {
+        "en": "The long drive",
+        "hi": "लंबा सफ़र"
+      },
+      "text": {
+        "en": "The ambulance drives 80 km through the night. Ramesh reaches Gwalior about three and a half hours after the pain began. A cardiology team opens the blocked artery with a balloon and a stent (angioplasty) about 40 minutes later.",
+        "hi": "एंबुलेंस रात में 80 किलोमीटर चलती है। दर्द शुरू होने के लगभग साढ़े तीन घंटे बाद रमेश ग्वालियर पहुँचता है। लगभग 40 मिनट बाद हृदय रोग की टीम गुब्बारे और स्टेंट से बंद नस खोलती है (एंजियोप्लास्टी)।"
+      },
+      "facts": [
+        {
+          "en": "Guidelines say: if angioplasty cannot happen within 2 hours of diagnosis, give the clot-dissolving injection first. Here, it took almost 3.",
+          "hi": "दिशानिर्देश कहते हैं: अगर जाँच के 2 घंटे के अंदर एंजियोप्लास्टी न हो सके, तो पहले थक्का घोलने वाला इंजेक्शन दें। यहाँ लगभग 3 घंटे लगे।",
+          "refs": [
+            "C27"
+          ]
+        },
+        {
+          "en": "Bhind to Gwalior is about 78 to 80 km by road.",
+          "hi": "भिंड से ग्वालियर सड़क के रास्ते लगभग 78 से 80 किलोमीटर है।",
+          "refs": [
+            "T15"
+          ]
+        }
+      ],
+      "choices": [
+        {
+          "label": {
+            "en": "Continue",
+            "hi": "आगे बढ़ें"
+          },
+          "set": {
+            "path": "direct_pci"
+          },
+          "next": "gwalior_hospital"
+        }
+      ]
+    },
+    "gwalior_car": {
+      "clock_min": 180,
+      "clock_label": {
+        "en": "2:40 am",
+        "hi": "रात 2:40"
+      },
+      "scene": {
+        "en": "The long drive",
+        "hi": "लंबा सफ़र"
+      },
+      "text": {
+        "en": "The car takes the highway to Gwalior. At night the drive and finding the right emergency gate take almost two and a half hours. Three hours after the pain began, Ramesh is finally on an ECG. The team opens the artery with angioplasty about 40 minutes later.",
+        "hi": "गाड़ी हाईवे से ग्वालियर जाती है। रात में सफ़र और सही इमरजेंसी गेट ढूँढने में लगभग ढाई घंटे लग जाते हैं। दर्द शुरू होने के तीन घंटे बाद आख़िरकार रमेश का ECG होता है। लगभग 40 मिनट बाद टीम एंजियोप्लास्टी से नस खोलती है।"
+      },
+      "facts": [
+        {
+          "en": "No one checked his heart for the first three hours. A first ECG early on is one of the things that shortens delays.",
+          "hi": "पहले तीन घंटे किसी ने उसके दिल की जाँच नहीं की। जल्दी ECG होना देरी कम करने वाली बातों में से एक है।",
+          "refs": [
+            "C10"
+          ]
+        }
+      ],
+      "choices": [
+        {
+          "label": {
+            "en": "Continue",
+            "hi": "आगे बढ़ें"
+          },
+          "set": {
+            "path": "direct_pci"
+          },
+          "next": "gwalior_hospital"
+        }
+      ]
+    },
+    "wait": {
+      "clock_min": 390,
+      "clock_label": {
+        "en": "6:10 am",
+        "hi": "सुबह 6:10"
+      },
+      "scene": {
+        "en": "Morning",
+        "hi": "सुबह"
+      },
+      "text": {
+        "en": "Ramesh takes the antacid. The pain dulls but never goes. By dawn he is grey, breathless and too weak to stand. Kamla is frightened. Sonu finds a man in the village who hires out his jeep.",
+        "hi": "रमेश गैस की दवा लेता है। दर्द थोड़ा कम होता है, पर जाता नहीं। सुबह तक उसका चेहरा पीला पड़ गया है, साँस फूल रही है और वह खड़ा भी नहीं हो पा रहा। कमला घबरा गई है। सोनू गाँव में एक आदमी को ढूँढता है जो अपनी जीप किराए पर देता है।"
+      },
+      "facts": [
+        {
+          "en": "This delay is common. In a large Indian study, the typical patient reached hospital 6 hours after symptoms began.",
+          "hi": "ऐसी देरी आम है। भारत के एक बड़े अध्ययन में आम मरीज़ लक्षण शुरू होने के 6 घंटे बाद अस्पताल पहुँचा।",
+          "refs": [
+            "C01"
+          ]
+        },
+        {
+          "en": "Delays were longer for people who were older, rural or could not read.",
+          "hi": "बुज़ुर्ग, गाँव के और पढ़ना-लिखना न जानने वाले लोगों को ज़्यादा देर हुई।",
+          "refs": [
+            "C10"
+          ]
+        }
+      ],
+      "choices": [
+        {
+          "label": {
+            "en": "Jeep to the district hospital in Bhind",
+            "hi": "जीप से भिंड ज़िला अस्पताल"
+          },
+          "next": "dh_late"
+        },
+        {
+          "label": {
+            "en": "Jeep straight to Gwalior",
+            "hi": "जीप से सीधे ग्वालियर"
+          },
+          "next": "road_late"
+        }
+      ]
+    },
+    "dh_late": {
+      "clock_min": 450,
+      "clock_label": {
+        "en": "7:10 am",
+        "hi": "सुबह 7:10"
+      },
+      "scene": {
+        "en": "The district hospital",
+        "hi": "ज़िला अस्पताल"
+      },
+      "text": {
+        "en": "Seven and a half hours after the pain began, the ECG shows a large heart attack. The doctor gives the clot-dissolving injection, because it can still help up to 12 hours, though much less than it would have at midnight. Then an ambulance to Gwalior.",
+        "hi": "दर्द शुरू होने के साढ़े सात घंटे बाद ECG में बड़ा हार्ट अटैक दिखता है। डॉक्टर थक्का घोलने वाला इंजेक्शन देते हैं, क्योंकि यह 12 घंटे तक मदद कर सकता है, हालाँकि आधी रात की तुलना में बहुत कम। फिर एंबुलेंस से ग्वालियर।"
+      },
+      "facts": [
+        {
+          "en": "Given 7 to 12 hours after symptoms, the drug saves about 20 more lives per 1,000. Within the first hour, about 65.",
+          "hi": "लक्षण शुरू होने के 7 से 12 घंटे बाद देने पर यह दवा हर 1,000 में लगभग 20 और जानें बचाती है। पहले घंटे में लगभग 65।",
+          "refs": [
+            "C16",
+            "C17"
+          ],
+          "kind": "golden_hour"
+        }
+      ],
+      "choices": [
+        {
+          "label": {
+            "en": "Continue to Gwalior",
+            "hi": "ग्वालियर चलें"
+          },
+          "set": {
+            "path": "late"
+          },
+          "next": "gwalior_hospital"
+        }
+      ]
+    },
+    "road_late": {
+      "clock_min": 480,
+      "clock_label": {
+        "en": "7:40 am",
+        "hi": "सुबह 7:40"
+      },
+      "scene": {
+        "en": "On the highway",
+        "hi": "हाईवे पर"
+      },
+      "text": {
+        "en": "Forty-five minutes into the drive, Ramesh goes quiet. His breathing changes. Sonu shouts at the driver to go faster. There is no oxygen, no monitor, and no one in the jeep who knows what to do.",
+        "hi": "सफ़र के पैंतालीस मिनट बाद रमेश चुप हो जाता है। उसकी साँसें बदल जाती हैं। सोनू ड्राइवर से तेज़ चलाने को चिल्लाता है। जीप में न ऑक्सीजन है, न मॉनिटर, और न कोई ऐसा जो जानता हो कि क्या करना है।"
+      },
+      "facts": [
+        {
+          "en": "When a heart attack damages enough muscle, the heart can fail to pump (shock). Even in hospital, about 37 of 100 such patients died in one Indian study.",
+          "hi": "जब हार्ट अटैक से दिल की काफ़ी मांसपेशी ख़राब हो जाती है, तो दिल पंप करना बंद कर सकता है (शॉक)। भारत के एक अध्ययन में अस्पताल में भी ऐसे 100 में से लगभग 37 मरीज़ों की मौत हुई।",
+          "refs": [
+            "C08"
+          ]
+        }
+      ],
+      "choices": [
+        {
+          "label": {
+            "en": "Continue",
+            "hi": "आगे बढ़ें"
+          },
+          "set": {
+            "path": "death"
+          },
+          "next": "ending"
+        }
+      ]
+    },
+    "gwalior_hospital": {
+      "clock_min": null,
+      "scene": {
+        "en": "Gwalior",
+        "hi": "ग्वालियर"
+      },
+      "text": {
+        "en": "In Gwalior the family must choose a hospital for the angiogram and any stent he needs.",
+        "hi": "ग्वालियर में परिवार को एंजियोग्राम और ज़रूरत पड़ने पर स्टेंट के लिए अस्पताल चुनना है।"
+      },
+      "facts": [
+        {
+          "en": "Every government hospital accepts the Ayushman card. Private hospitals accept it only if they are empanelled.",
+          "hi": "हर सरकारी अस्पताल आयुष्मान कार्ड स्वीकार करता है। निजी अस्पताल तभी स्वीकार करते हैं जब वे योजना में सूचीबद्ध हों।",
+          "refs": [
+            "F07"
+          ]
+        }
+      ],
+      "choices": [
+        {
+          "label": {
+            "en": "Government medical college hospital",
+            "hi": "सरकारी मेडिकल कॉलेज अस्पताल"
+          },
+          "set": {
+            "hospital": "government"
+          },
+          "next": "ending"
+        },
+        {
+          "label": {
+            "en": "Private hospital",
+            "hi": "निजी अस्पताल"
+          },
+          "set": {
+            "hospital": "private"
+          },
+          "next": "ending"
+        }
+      ]
+    }
+  },
+  "endings": {
+    "early_lysis": {
+      "title": {
+        "en": "Ramesh goes home",
+        "hi": "रमेश घर लौटता है"
+      },
+      "text": {
+        "en": "The angiogram the next morning finds the narrowed artery, and a stent holds it open. Because the clot was dissolved within about two hours, much of his heart muscle was saved. After a few days he goes home to Kesarpura, with tablets to take every day for at least a year.",
+        "hi": "अगली सुबह एंजियोग्राम में सिकुड़ी हुई नस मिलती है, और एक स्टेंट उसे खुला रखता है। थक्का लगभग दो घंटे के अंदर घुल गया था, इसलिए दिल की काफ़ी मांसपेशी बच गई। कुछ दिनों बाद वह केसरपुरा लौटता है, और उसे कम से कम एक साल तक रोज़ दवाइयाँ लेनी हैं।"
+      },
+      "stat": {
+        "en": "Of 100 people treated in time like this, about 94 are alive a year later.",
+        "hi": "इस तरह समय पर इलाज पाने वाले 100 में से लगभग 94 लोग एक साल बाद जीवित हैं।",
+        "survivors_per_100": 94,
+        "refs": [
+          "C14"
+        ]
+      }
+    },
+    "direct_pci": {
+      "title": {
+        "en": "Ramesh goes home",
+        "hi": "रमेश घर लौटता है"
+      },
+      "text": {
+        "en": "The stent opened his artery, but it took more than three and a half hours from the first pain. Part of the heart muscle could not be saved. He goes home after a few days, with daily tablets for at least a year and advice to join a heart rehabilitation programme.",
+        "hi": "स्टेंट से नस खुल गई, लेकिन पहले दर्द से इसमें साढ़े तीन घंटे से ज़्यादा लगे। दिल की कुछ मांसपेशी नहीं बचाई जा सकी। कुछ दिनों बाद वह घर लौटता है, कम से कम एक साल तक रोज़ की दवाइयों और हृदय पुनर्वास कार्यक्रम की सलाह के साथ।"
+      },
+      "stat": {
+        "en": "Of 100 people whose angioplasty came later than recommended, about 92 are alive a year later.",
+        "hi": "जिन 100 लोगों की एंजियोप्लास्टी तय समय से देर से हुई, उनमें से लगभग 92 एक साल बाद जीवित हैं।",
+        "survivors_per_100": 92,
+        "refs": [
+          "C14"
+        ]
+      }
+    },
+    "late": {
+      "title": {
+        "en": "Ramesh survives, with a weaker heart",
+        "hi": "रमेश बच जाता है, पर दिल कमज़ोर हो गया"
+      },
+      "text": {
+        "en": "Ramesh survives. But hours of blocked blood flow have left a large part of his heart muscle scarred. He gets breathless walking to the fields. He may not be able to do heavy farm work again, and he will need medicines and check-ups for life.",
+        "hi": "रमेश बच जाता है। लेकिन घंटों तक ख़ून का बहाव रुकने से उसके दिल की मांसपेशी का बड़ा हिस्सा ख़राब हो गया है। खेत तक चलने में उसकी साँस फूलती है। शायद वह फिर कभी भारी खेती का काम न कर पाए, और उसे जीवन भर दवा और जाँच की ज़रूरत होगी।"
+      },
+      "stat": {
+        "en": "Of 100 people whose clot-dissolving treatment came late, about 81 are alive a year later.",
+        "hi": "जिन 100 लोगों को थक्का घोलने वाला इलाज देर से मिला, उनमें से लगभग 81 एक साल बाद जीवित हैं।",
+        "survivors_per_100": 81,
+        "refs": [
+          "C14"
+        ]
+      }
+    },
+    "death": {
+      "title": {
+        "en": "Ramesh did not survive",
+        "hi": "रमेश नहीं बच सका"
+      },
+      "text": {
+        "en": "Ramesh died before the jeep reached Gwalior. He was 52.\n\nNo single choice caused this. Thinking it was gas, waiting until morning, and travelling without an ambulance each took away time his heart did not have.",
+        "hi": "जीप के ग्वालियर पहुँचने से पहले रमेश की मौत हो गई। वह 52 साल का था।\n\nकिसी एक फ़ैसले से ऐसा नहीं हुआ। इसे गैस समझना, सुबह तक इंतज़ार करना और बिना एंबुलेंस के सफ़र करना, हर फ़ैसले ने वह समय छीन लिया जो उसके दिल के पास नहीं था।"
+      },
+      "stat": {
+        "en": "Hospital records cannot count people who die before they arrive. The real risk of a delayed heart attack is higher than any study shows.",
+        "hi": "अस्पताल के रिकॉर्ड उन लोगों को नहीं गिन सकते जिनकी मौत अस्पताल पहुँचने से पहले हो जाती है। देर से इलाज वाले हार्ट अटैक का असली जोखिम किसी भी अध्ययन से ज़्यादा है।",
+        "survivors_per_100": null,
+        "refs": [
+          "C14",
+          "C08"
+        ]
+      },
+      "turning_points": {
+        "en": [
+          "At 11:40 pm: treat chest pain with sweating as a heart attack, not gas.",
+          "Call 108 instead of waiting for morning.",
+          "Go to the nearest hospital that can do an ECG and give the injection."
+        ],
+        "hi": [
+          "रात 11:40 पर: पसीने के साथ सीने के दर्द को गैस नहीं, हार्ट अटैक मानें।",
+          "सुबह का इंतज़ार करने के बजाय 108 पर कॉल करें।",
+          "सबसे नज़दीकी अस्पताल जाएँ जहाँ ECG और इंजेक्शन मिल सके।"
+        ]
+      }
+    }
+  },
+  "costs": {
+    "note": {
+      "en": "Ranges, not exact bills. Costs in the first month for one heart attack treated with one stent. Wage days use about ₹478 a day.",
+      "hi": "ये अनुमानित दायरे हैं, असली बिल नहीं। एक स्टेंट वाले हार्ट अटैक इलाज का पहले महीने का ख़र्च। मज़दूरी के दिन लगभग ₹478 प्रतिदिन पर गिने गए हैं।"
+    },
+    "lines": {
+      "hospital_card": {
+        "en": "Hospital bill (paid by Ayushman)",
+        "hi": "अस्पताल का बिल (आयुष्मान से भुगतान)",
+        "min": 0,
+        "max": 0,
+        "refs": [
+          "F10",
+          "F04"
+        ],
+        "detail": {
+          "en": "The scheme pays the hospital about ₹72,200 for an angioplasty with one stent.",
+          "hi": "योजना एक स्टेंट वाली एंजियोप्लास्टी के लिए अस्पताल को लगभग ₹72,200 देती है।"
+        }
+      },
+      "extras_card_gov": {
+        "en": "Medicines and tests bought outside",
+        "hi": "बाहर से ख़रीदी दवाएँ और जाँचें",
+        "min": 0,
+        "max": 21827,
+        "refs": [
+          "F22"
+        ],
+        "detail": {
+          "en": "Two in three card holders still paid something. In government hospitals the average was about ₹21,800.",
+          "hi": "तीन में से दो कार्डधारकों ने फिर भी कुछ पैसे दिए। सरकारी अस्पतालों में औसत लगभग ₹21,800 था।"
+        }
+      },
+      "extras_card_pvt": {
+        "en": "Medicines, tests and extra charges",
+        "hi": "दवाएँ, जाँचें और अतिरिक्त शुल्क",
+        "min": 0,
+        "max": 53965,
+        "refs": [
+          "F22"
+        ],
+        "detail": {
+          "en": "In private hospitals, card holders paid about ₹54,000 on average, all illnesses.",
+          "hi": "निजी अस्पतालों में कार्डधारकों ने औसतन लगभग ₹54,000 दिए (सभी बीमारियों का औसत)।"
+        }
+      },
+      "hospital_nocard_gov": {
+        "en": "Hospital bill",
+        "hi": "अस्पताल का बिल",
+        "min": 11146,
+        "max": 50000,
+        "refs": [
+          "F22",
+          "F18"
+        ],
+        "detail": {
+          "en": "Without a card, a large state hospital charges about ₹50,000 for a cath-lab procedure.",
+          "hi": "बिना कार्ड के एक बड़ा सरकारी अस्पताल कैथ लैब प्रक्रिया के लगभग ₹50,000 लेता है।"
+        }
+      },
+      "hospital_nocard_pvt": {
+        "en": "Hospital bill",
+        "hi": "अस्पताल का बिल",
+        "min": 120000,
+        "max": 200000,
+        "refs": [
+          "F19",
+          "F18"
+        ],
+        "detail": {
+          "en": "Angioplasty in a private hospital costs about ₹1.2 to ₹2 lakh.",
+          "hi": "निजी अस्पताल में एंजियोप्लास्टी का ख़र्च लगभग ₹1.2 से ₹2 लाख है।"
+        }
+      },
+      "travel": {
+        "en": "Travel, the attendant's food and stay",
+        "hi": "आना-जाना, साथ रहने वाले का खाना और ठहरना",
+        "min": 4000,
+        "max": 9000,
+        "refs": [
+          "ASSUMPTION"
+        ],
+        "detail": {
+          "en": "Not covered by Ayushman. Our estimate; no reliable local figure exists.",
+          "hi": "आयुष्मान में शामिल नहीं। यह हमारा अनुमान है; कोई भरोसेमंद स्थानीय आँकड़ा नहीं मिला।"
+        }
+      },
+      "wages": {
+        "en": "Lost wages (patient 2 weeks, attendant 1 week)",
+        "hi": "छूटी मज़दूरी (मरीज़ 2 हफ़्ते, साथ वाला 1 हफ़्ता)",
+        "min": 10038,
+        "max": 10038,
+        "refs": [
+          "F32"
+        ]
+      },
+      "medicines": {
+        "en": "Medicines after discharge, first month",
+        "hi": "छुट्टी के बाद की दवाइयाँ, पहला महीना",
+        "min": 750,
+        "max": 1500,
+        "refs": [
+          "F26"
+        ]
+      }
+    },
+    "scenarios": {
+      "card_government": [
+        "hospital_card",
+        "extras_card_gov",
+        "travel",
+        "wages",
+        "medicines"
+      ],
+      "card_private": [
+        "hospital_card",
+        "extras_card_pvt",
+        "travel",
+        "wages",
+        "medicines"
+      ],
+      "nocard_government": [
+        "hospital_nocard_gov",
+        "travel",
+        "wages",
+        "medicines"
+      ],
+      "nocard_private": [
+        "hospital_nocard_pvt",
+        "travel",
+        "wages",
+        "medicines"
+      ]
+    },
+    "borrowing": {
+      "en": "In studies of heart-attack families in Kerala, between 1 in 12 and 7 in 10 borrowed money or sold something to pay.",
+      "hi": "केरल में हार्ट अटैक वाले परिवारों पर हुए अध्ययनों में, 12 में से 1 से लेकर 10 में से 7 परिवारों ने इलाज के लिए उधार लिया या कुछ बेचा।",
+      "refs": [
+        "F24",
+        "F25"
+      ]
+    }
+  },
+  "lessons": {
+    "title": {
+      "en": "Five things to remember",
+      "hi": "याद रखने की पाँच बातें"
+    },
+    "items": [
+      {
+        "en": "Chest pressure with sweating, breathlessness or pain in the arm or jaw: treat it as a heart attack, not gas.",
+        "hi": "पसीना, साँस फूलना या हाथ-जबड़े में दर्द के साथ सीने में दबाव: इसे गैस नहीं, हार्ट अटैक मानें।",
+        "refs": [
+          "C23"
+        ]
+      },
+      {
+        "en": "Call 108 (or 112). Do not wait for morning, and do not drive the patient yourself if an ambulance can come.",
+        "hi": "108 (या 112) पर कॉल करें। सुबह का इंतज़ार न करें, और एंबुलेंस आ सकती हो तो मरीज़ को ख़ुद गाड़ी में न ले जाएँ।",
+        "refs": [
+          "C24"
+        ]
+      },
+      {
+        "en": "Ask the 108 call-taker whether to chew an aspirin, and do not give one if the person is allergic.",
+        "hi": "108 पर बात करने वाले से पूछें कि एस्पिरिन चबाएँ या नहीं, और एलर्जी हो तो न दें।",
+        "refs": [
+          "C20",
+          "C22"
+        ]
+      },
+      {
+        "en": "The first hours matter most. The nearest hospital that can do an ECG and give the clot-dissolving injection is often the right first stop.",
+        "hi": "शुरुआती घंटे सबसे अहम हैं। सबसे नज़दीकी अस्पताल जहाँ ECG और थक्का घोलने वाला इंजेक्शन मिले, अक्सर सही पहला पड़ाव है।",
+        "refs": [
+          "C17",
+          "C27"
+        ]
+      },
+      {
+        "en": "Check today whether your family is eligible for an Ayushman card: call 14555 or ask at any government hospital.",
+        "hi": "आज ही पता करें कि आपका परिवार आयुष्मान कार्ड के लिए पात्र है या नहीं: 14555 पर कॉल करें या किसी भी सरकारी अस्पताल में पूछें।",
+        "refs": [
+          "F03"
+        ]
+      }
+    ]
+  },
+  "share": {
+    "en": "A heart attack at night, 80 km from the city. Can you get Ramesh to treatment in time? Try it, in Hindi or English:",
+    "hi": "रात में हार्ट अटैक, शहर से 80 किलोमीटर दूर। क्या आप रमेश को समय पर इलाज तक पहुँचा पाएँगे? हिंदी या अंग्रेज़ी में आज़माएँ:"
+  },
+  "sources": {
+    "C01": {
+      "cite": "Xavier D et al. Treatment and outcomes of acute coronary syndromes in India (CREATE). The Lancet, 2008.",
+      "url": "https://doi.org/10.1016/S0140-6736(08)60623-6",
+      "period": "2000s registry; dated"
+    },
+    "C08": {
+      "cite": "Sharma YP et al. Indian Heart Journal 2021;73(2):174-179 (PGIMER Chandigarh ACS cohort).",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8065348",
+      "period": "Jul 2018 to Jun 2019"
+    },
+    "C10": {
+      "cite": "Mohan B et al. Prehospital delay in STEMI, five centres in Punjab. Indian Heart Journal, 2018.",
+      "url": "https://doi.org/10.1016/j.ihj.2018.10.395",
+      "period": "2015"
+    },
+    "C11": {
+      "cite": "Kashyap JR et al. Pre-hospital and in-hospital delays in STEMI, GMCH Chandigarh. Int J Community Med Public Health, 2020.",
+      "url": "https://www.ijcmph.com/index.php/ijcmph/article/download/6094/3931/24305",
+      "period": "Aug 2018 to Jul 2019; 100 patients, one hospital"
+    },
+    "C14": {
+      "cite": "Mathew A et al. Timeliness of reperfusion in Kerala (TRUST). Postgraduate Medical Journal, 2025.",
+      "url": "https://doi.org/10.1093/postmj/qgae129",
+      "period": "16 PCI hospitals, Kerala; 1-year follow-up"
+    },
+    "C16": {
+      "cite": "Fibrinolytic Therapy Trialists' Collaborative Group. The Lancet, 1994.",
+      "url": "https://www.cardioscience.ox.ac.uk/publications/44347",
+      "period": "Trials to 1993; reference overview"
+    },
+    "C17": {
+      "cite": "Boersma E et al. Early thrombolytic treatment in acute myocardial infarction: the golden hour. The Lancet, 1996.",
+      "url": "https://doi.org/10.1016/S0140-6736(96)02514-7",
+      "period": "22 trials, 1983 to 1993"
+    },
+    "C20": {
+      "cite": "ACC/AHA STEMI guideline update, summary in American Family Physician, 2009.",
+      "url": "https://www.aafp.org/pubs/afp/issues/2009/0615/p1080.html",
+      "period": "Guideline 2007-08; dated"
+    },
+    "C22": {
+      "cite": "MoHFW, Government of India. Standard Treatment Guidelines: Management of ST-Elevation Myocardial Infarction, 2022.",
+      "url": "https://main.mohfw.gov.in/sites/default/files/Fin%20-%20STEMI%20Guidline.pdf",
+      "period": "2022"
+    },
+    "C23": {
+      "cite": "MoHFW STEMI guideline 2022 (symptoms).",
+      "url": "https://main.mohfw.gov.in/sites/default/files/Fin%20-%20STEMI%20Guidline.pdf",
+      "period": "2022"
+    },
+    "C24": {
+      "cite": "MoHFW STEMI guideline 2022 (transport).",
+      "url": "https://main.mohfw.gov.in/sites/default/files/Fin%20-%20STEMI%20Guidline.pdf",
+      "period": "2022"
+    },
+    "C25": {
+      "cite": "MoHFW STEMI guideline 2022 (thrombolysis and pharmaco-invasive strategy).",
+      "url": "https://main.mohfw.gov.in/sites/default/files/Fin%20-%20STEMI%20Guidline.pdf",
+      "period": "2022"
+    },
+    "C27": {
+      "cite": "ESC Guidelines for the management of acute coronary syndromes. European Heart Journal, 2023.",
+      "url": "https://academic.oup.com/eurheartj/article/44/38/3720/7243210",
+      "period": "2023"
+    },
+    "T01": {
+      "cite": "Ziqitza Health Care, 108 Emergency Ambulance (operator page).",
+      "url": "https://zhl.org.in/emergency-108-ambulance",
+      "period": "Undated; former MP operator"
+    },
+    "T03": {
+      "cite": "Free Press Journal, MP State Assembly: Opposition puts govt in dock over 108 ambulance service (Deputy CM statement).",
+      "url": "https://www.freepressjournal.in/bhopal/mp-state-assembly-opposition-puts-govt-in-dock-over-108-ambulance-service",
+      "period": "5 Dec 2025"
+    },
+    "T04": {
+      "cite": "Free Press Journal, Company under CBI scanner takes over 108 services (contract standard).",
+      "url": "https://www.freepressjournal.in/bhopal/company-under-cbi-scanner-takes-over-108-services",
+      "period": "2019; dated"
+    },
+    "T06": {
+      "cite": "MoHFW/DGHS, Guidelines for Management of ST-Elevated Myocardial Infarction (facility levels).",
+      "url": "https://main.mohfw.gov.in/sites/default/files/Fin%20-%20STEMI%20Guidline.pdf",
+      "period": "2022"
+    },
+    "T07": {
+      "cite": "Indian Pharma Post, Seven-state heart attack programme (MP not included).",
+      "url": "https://www.indianpharmapost.com/healthcare/seven-state-heart-attack-programme-in-india-cuts-treatment-delays-raises-survival-across-167-districts-22106",
+      "period": "9 Oct 2026"
+    },
+    "T08": {
+      "cite": "Patrika, UP STEMI programme: 57 medical colleges in hub-and-spoke model.",
+      "url": "https://www.patrika.com/lucknow-news/up-stemi-program-saving-heart-attack-patients-57-medical-colleges-linked-in-hub-spoke-model-20356786",
+      "period": "17 Feb 2026"
+    },
+    "T10": {
+      "cite": "Free Press Journal, Man taken to hospital on handcart as ambulance fails to arrive after 2 hours (Sheopur).",
+      "url": "https://www.freepressjournal.in/bhopal/mp-news-man-taken-to-hospital-on-handcart-as-ambulance-fails-to-arrive-even-after-2-hours-video",
+      "period": "24 Oct 2025; single report"
+    },
+    "T11": {
+      "cite": "Aaj Tak, Guna: patient dies after ambulance tyre puncture.",
+      "url": "https://www.aajtak.in/madhya-pradesh/story/guna-patient-dies-after-ambulance-tyre-puncture-lcln-strc-2375176-2025-11-03",
+      "period": "3 Nov 2025; single report"
+    },
+    "T12": {
+      "cite": "Free Press Journal, Woman dies after ambulance fails to reach Gwalior station on time.",
+      "url": "https://www.freepressjournal.in/amp/bhopal/66-year-old-woman-suffers-heart-attack-on-train-dies-after-ambulance-fails-to-pick-her-from-nearest-gwalior-station-on-time",
+      "period": "22 Aug 2024; single report"
+    },
+    "T15": {
+      "cite": "Chambal Division, Government of MP, How to Reach; Rome2rio Bhind to Gwalior.",
+      "url": "https://chambaldivisionmp.nic.in/?p=2807",
+      "period": "Static"
+    },
+    "T21": {
+      "cite": "CAG of India, Report No. 6 of 2024: Public Health Infrastructure and Management of Health Services, Madhya Pradesh.",
+      "url": "https://saiindia.gov.in/webroot/uploads/download_audit_report/2024/Final-Report-No.06-English-(Gwalior)--18.11.2024-signed-0676405d45672c0.93642583.pdf",
+      "period": "Data to March 2022"
+    },
+    "T33": {
+      "cite": "Doddipalli et al. Determinants of total ischemic time in primary PCI. Indian Heart Journal, 2018.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6309146",
+      "period": "2016-17, Tirupati; dated"
+    },
+    "F01": {
+      "cite": "Drishti IAS summary of PM-JAY scheme rules (NHA/NITI material).",
+      "url": "https://www.drishtiias.com/daily-updates/daily-news-analysis/pradhan-mantri-jan-arogya-yojana-6/print_manually",
+      "period": "20 Mar 2026"
+    },
+    "F03": {
+      "cite": "NHA, PM-JAY process flow at empanelled hospitals; Haryana SHA FAQs (eligibility, helpline 14555).",
+      "url": "https://ayushmanbharat.haryana.gov.in/frequently-asked-questions/",
+      "period": "Scheme rules"
+    },
+    "F04": {
+      "cite": "NHA, PM-JAY process flow at empanelled hospitals.",
+      "url": "https://sha.uk.gov.in/ScannedDocs/WebSite/Uploads/CLAIM_ADJ/pm-jay-process-flow-at-empanelled-hospitals-6-5-19.pdf",
+      "period": "2019"
+    },
+    "F07": {
+      "cite": "Lok Sabha Starred Question 404 (28 Mar 2025) and Unstarred Question 1087 (25 Jul 2025), MoHFW.",
+      "url": "https://eparlib.sansad.in/bitstream/123456789/3009739/1/AS404_w9lAPq.pdf",
+      "period": "As on 1 Mar 2025"
+    },
+    "F10": {
+      "cite": "NHA, Health Benefit Package 2.0 master: PTCA MC011A ₹40,600 plus drug-eluting stent ₹31,600.",
+      "url": "https://nha.gov.in/img/resources/HBP-2.0-Package-master.pdf",
+      "period": "HBP 2.0 (2022)"
+    },
+    "F18": {
+      "cite": "Free Press Journal, Treatment costs to drop by 75% as super-speciality centres get cabinet nod (cardiologist quote).",
+      "url": "https://www.freepressjournal.in/bhopal/treatment-costs-to-drop-by-75-as-super-speciality-centres-get-cabinet-nod-in-madhya-pradesh",
+      "period": "23 Apr 2026"
+    },
+    "F19": {
+      "cite": "Sahanaa C et al. Out-of-pocket expenditures of myocardial infarction patients in Pondicherry. JEBHPME, 2023.",
+      "url": "https://publish.kne-publishing.com/index.php/JEBHPME/article/view/13141",
+      "period": "About 2020 to 2023"
+    },
+    "F22": {
+      "cite": "NITI Aayog-commissioned IQVIA evaluation of PM-JAY, as reported by Trak.in and Drishti IAS.",
+      "url": "https://trak.in/stories/patients-pay-rs-54000-from-their-own-under-pradhan-mantri-jan-arogya-yojanas-private-hospitalization/",
+      "period": "Published Mar 2026; all conditions"
+    },
+    "F24": {
+      "cite": "Mohanan PP, Huffman MD et al. Catastrophic health spending after acute MI in Kerala. JAMA Network Open, 2019.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6537817/",
+      "period": "About 2014 to 2016"
+    },
+    "F25": {
+      "cite": "Daivadanam M. Pathways to catastrophic health expenditure for ACS in Kerala. BMC Public Health, 2012.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3436731",
+      "period": "About 2010 to 2011; dated"
+    },
+    "F26": {
+      "cite": "Sahanaa C et al., 2023 (monthly post-MI medicine cost).",
+      "url": "https://publish.kne-publishing.com/index.php/JEBHPME/article/view/13141",
+      "period": "About 2020 to 2023"
+    },
+    "F32": {
+      "cite": "King Stubb & Kasiva, MP revises minimum wages with VDA (unskilled ₹12,425/month).",
+      "url": "https://ksandk.com/newsletter/mp-revises-minimum-wages-with-vda/",
+      "period": "Apr to Sep 2026"
+    },
+    "ASSUMPTION": {
+      "cite": "Beyond Metros estimate. No reliable local source for night travel, attendant food or lodging costs.",
+      "url": "",
+      "period": "Estimate"
+    },
+    "P01": {
+      "cite": "Nivarana (first published in The Hindu), WhatsApp training and tenecteplase injection bring heart attack care to rural Punjab.",
+      "url": "https://nivarana.org/vital-signs/whatsapp-training-and-tenecteplase-injection-bring-heart-attack-care-to-rural-punjab",
+      "period": "12 Jun 2026; Mission AMRIT since Jul 2025"
+    },
+    "P02": {
+      "cite": "ThePrint (PTI), Punjab health minister expands STEMI project.",
+      "url": "https://theprint.in/india/punjab-health-minister-expands-stemi-project/2676687",
+      "period": "1 Jul 2025; pilot figures"
+    },
+    "P03": {
+      "cite": "NITI Aayog Frontier Tech, How Karnataka built an AI-powered cardiac lifeline.",
+      "url": "https://frontiertech.niti.gov.in/story/how-karnataka-built-an-ai-powered-cardiac-lifeline-that-helped-save-thousands-of-lives",
+      "period": "Mar 2023 to Feb 2026; updated 15 May 2026"
+    },
+    "P04": {
+      "cite": "Drishti IAS, Haryana launches Tele-ECG service (600 facilities, ₹89 per test, NP-NCD funding).",
+      "url": "https://www.drishtiias.com/state-pcs-current-affairs/haryana-launches-tele-ecg-service/print_manually",
+      "period": "Launched 29 May 2026; reported 1 Oct 2026"
+    },
+    "P05": {
+      "cite": "MoHFW STEMI guideline 2022: e-Sanjeevani ECG transmission, tele-reporting and free bolus thrombolytics.",
+      "url": "https://main.mohfw.gov.in/sites/default/files/Fin%20-%20STEMI%20Guidline.pdf",
+      "period": "2022"
+    },
+    "P06": {
+      "cite": "All India Radio News, eSanjeevani achieves milestone of 50 crore teleconsultations.",
+      "url": "https://newsonair.gov.in/esanjeevani-achieves-milestone-of-50-cr-teleconsultations-from-across-the-country/",
+      "period": "6 Oct 2026"
+    },
+    "P07": {
+      "cite": "Ministry of Home Affairs, Emergency Response Support System (112); 112.gov.in.",
+      "url": "https://www.mha.gov.in/en/commoncontent/emergency-response-support-system-erss",
+      "period": "Current"
+    },
+    "P08": {
+      "cite": "Digital Health News, Tamil Nadu to introduce real-time ambulance tracking app.",
+      "url": "https://www.digitalhealthnews.com/tamil-nadu-to-introduce-real-time-ambulance-tracking-app",
+      "period": "Dec 2024 pilot"
+    },
+    "P09": {
+      "cite": "NHA, Guidelines on processes for hospital transactions (emergency identification, TPIN).",
+      "url": "https://cdnbbsr.s3waas.gov.in/s3169779d3852b32ce8b1a1724dbf5217d/uploads/2022/05/2022051095-1.pdf",
+      "period": "Scheme guideline"
+    },
+    "P10": {
+      "cite": "Vikaspedia (MoHFW content), CPR Awareness Week 2025; Devdiscourse/PIB on 6,06,374 people trained.",
+      "url": "https://en.vikaspedia.in/viewcontent/health/health-campaigns/important-days/cpr-awareness-week?lgn=en",
+      "period": "13 to 17 Oct 2025"
+    },
+    "P12": {
+      "cite": "Deccan Herald, Phase 2 of Puneeth Rajkumar Hrudaya Jyothi scheme (free tenecteplase to all spoke hospitals).",
+      "url": "https://www.deccanherald.com/india/karnataka/phase-2-of-puneeth-rajkumar-hrudaya-jyothi-scheme-to-be-launched-today-2937383",
+      "period": "15 Mar 2024"
+    },
+    "P14": {
+      "cite": "PIB factsheet, Ayushman Bharat Digital Mission (records, insurers, Digital Health Incentive Scheme).",
+      "url": "https://static.pib.gov.in/WriteReadData/specificdocs/documents/2026/jul/doc202676912801.pdf",
+      "period": "Jul 2026"
+    },
+    "P15": {
+      "cite": "Free Press Journal, At Arogya Mandir centres, about 10,000 community health officers handle screenings.",
+      "url": "https://www.freepressjournal.in/bhopal/bhopal-news-at-arogya-mandir-centres-nurses-diagnose-cancer-and-tb-not-doctors",
+      "period": "8 Jan 2026"
+    },
+    "T24": {
+      "cite": "Free Press Journal, Equipment worth ₹1,000 crore for government medical colleges (Gwalior among six).",
+      "url": "https://www.freepressjournal.in/bhopal/mp-news-equipment-worth-1000-crore-to-be-procured-soon-for-government-medical-colleges-focus-on-oncology-cardio-organ-transplants",
+      "period": "13 Jan 2026; plans, not operating"
+    },
+    "T31": {
+      "cite": "Free Press Journal, Madhya Pradesh launches Dial-112.",
+      "url": "https://www.freepressjournal.in/india/madhya-pradesh-launches-dial-112-phases-out-dial-100-for-integrated-emergency-response",
+      "period": "14 Aug 2025"
+    }
+  },
+  "actors": {
+    "government": {
+      "en": "Government",
+      "hi": "सरकार"
+    },
+    "hospitals": {
+      "en": "Hospitals and medical colleges",
+      "hi": "अस्पताल और मेडिकल कॉलेज"
+    },
+    "private": {
+      "en": "Private and healthtech",
+      "hi": "निजी और हेल्थटेक"
+    },
+    "community": {
+      "en": "Community",
+      "hi": "समुदाय"
+    }
+  },
+  "system_fixes": {
+    "symptoms": [
+      {
+        "title": {
+          "en": "Teach the signs where people already go",
+          "hi": "लक्षण वहीं सिखाएँ जहाँ लोग पहले से जाते हैं"
+        },
+        "text": {
+          "en": "About 10,000 community health officers at Madhya Pradesh's Ayushman Arogya Mandirs already screen and refer patients. Heart attack signs and 'call 108, do not wait' can be part of every visit.",
+          "hi": "मध्य प्रदेश के आयुष्मान आरोग्य मंदिरों में लगभग 10,000 सामुदायिक स्वास्थ्य अधिकारी पहले से जाँच करते और मरीज़ों को आगे भेजते हैं। हार्ट अटैक के लक्षण और '108 बुलाएँ, इंतज़ार न करें' हर मुलाक़ात का हिस्सा बन सकते हैं।"
+        },
+        "actors": [
+          "government",
+          "community"
+        ],
+        "refs": [
+          "P15"
+        ]
+      },
+      {
+        "title": {
+          "en": "One trained person in every household",
+          "hi": "हर घर में एक प्रशिक्षित व्यक्ति"
+        },
+        "text": {
+          "en": "India's bystander CPR rate is only about 1 to 10 in 100. The Health Ministry's first CPR Awareness Week in October 2025 trained over 6 lakh people. Village-level training reaches families like Ramesh's.",
+          "hi": "भारत में आसपास मौजूद लोगों द्वारा CPR देने की दर 100 में से केवल 1 से 10 है। अक्टूबर 2025 में स्वास्थ्य मंत्रालय के पहले CPR जागरूकता सप्ताह में 6 लाख से ज़्यादा लोगों को प्रशिक्षण दिया गया। गाँव स्तर का प्रशिक्षण रमेश जैसे परिवारों तक पहुँचता है।"
+        },
+        "actors": [
+          "government",
+          "community"
+        ],
+        "refs": [
+          "P10"
+        ]
+      },
+      {
+        "title": {
+          "en": "Hindi voice messages, not leaflets",
+          "hi": "पर्चे नहीं, हिंदी में आवाज़ वाले संदेश"
+        },
+        "text": {
+          "en": "Short Hindi audio and WhatsApp messages about chest pain and sweating can reach phones in every village. Healthtech firms, hospitals and NGOs can make these with the district health team.",
+          "hi": "सीने में दर्द और पसीने पर छोटे हिंदी ऑडियो और व्हाट्सऐप संदेश हर गाँव के फ़ोन तक पहुँच सकते हैं। हेल्थटेक कंपनियाँ, अस्पताल और संस्थाएँ इन्हें ज़िला स्वास्थ्य टीम के साथ बना सकती हैं।"
+        },
+        "actors": [
+          "private",
+          "hospitals"
+        ],
+        "refs": [
+          "ASSUMPTION"
+        ]
+      }
+    ],
+    "wait": [
+      {
+        "title": {
+          "en": "Make the call feel safe and easy",
+          "hi": "कॉल करना आसान और भरोसेमंद बनाएँ"
+        },
+        "text": {
+          "en": "Families wait partly because they are unsure. The national 112 India app sends the caller's location with one button press, so help can be sent even when someone cannot explain where they are.",
+          "hi": "परिवार इंतज़ार इसलिए भी करते हैं क्योंकि उन्हें यक़ीन नहीं होता। राष्ट्रीय '112 India' ऐप एक बटन दबाने पर कॉल करने वाले की लोकेशन भेज देता है, ताकि पता बताए बिना भी मदद भेजी जा सके।"
+        },
+        "actors": [
+          "government"
+        ],
+        "refs": [
+          "P07"
+        ]
+      },
+      {
+        "title": {
+          "en": "A first ECG at the nearest health centre",
+          "hi": "सबसे नज़दीकी स्वास्थ्य केंद्र पर पहला ECG"
+        },
+        "text": {
+          "en": "Haryana now runs tele-ECG in 600 government facilities, including 408 primary health centres, at ₹89 a test. An ECG close to home turns 'maybe gas' into a clear answer within minutes.",
+          "hi": "हरियाणा अब 600 सरकारी केंद्रों में टेली-ECG चलाता है, जिनमें 408 प्राथमिक स्वास्थ्य केंद्र हैं, ₹89 प्रति जाँच पर। घर के पास ECG होने से 'शायद गैस है' का जवाब कुछ ही मिनटों में साफ़ हो जाता है।"
+        },
+        "actors": [
+          "government",
+          "private"
+        ],
+        "refs": [
+          "P04"
+        ]
+      }
+    ],
+    "amb108": [
+      {
+        "title": {
+          "en": "Live ambulance tracking for the family",
+          "hi": "परिवार के लिए एंबुलेंस की लाइव ट्रैकिंग"
+        },
+        "text": {
+          "en": "Tamil Nadu has piloted an SMS to the caller with the driver's number, a live tracking link and the arrival time. Its state average response is about 13 minutes.",
+          "hi": "तमिलनाडु ने कॉल करने वाले को SMS भेजने का पायलट किया है, जिसमें ड्राइवर का नंबर, लाइव ट्रैकिंग लिंक और पहुँचने का समय होता है। वहाँ का औसत पहुँचने का समय लगभग 13 मिनट है।"
+        },
+        "actors": [
+          "government",
+          "private"
+        ],
+        "refs": [
+          "P08"
+        ]
+      },
+      {
+        "title": {
+          "en": "One number, one map",
+          "hi": "एक नंबर, एक नक़्शा"
+        },
+        "text": {
+          "en": "The national 112 system dispatches from a digital map and tracks vehicles through on-board terminals. Madhya Pradesh launched Dial 112 in 2025; linking it fully with 108 ambulances would let the nearest vehicle be sent automatically.",
+          "hi": "राष्ट्रीय 112 व्यवस्था डिजिटल नक़्शे से गाड़ियाँ भेजती है और उनमें लगे टर्मिनल से उन्हें ट्रैक करती है। मध्य प्रदेश ने 2025 में डायल 112 शुरू किया; इसे 108 एंबुलेंस से पूरी तरह जोड़ने पर सबसे नज़दीकी गाड़ी अपने आप भेजी जा सकेगी।"
+        },
+        "actors": [
+          "government"
+        ],
+        "refs": [
+          "P07",
+          "T31"
+        ]
+      },
+      {
+        "title": {
+          "en": "Publish response times by district",
+          "hi": "ज़िलेवार पहुँचने का समय सार्वजनिक करें"
+        },
+        "text": {
+          "en": "We found only a statewide average stated in the Assembly, and no public district data. An open dashboard for Bhind, Morena and Shivpuri would show where ambulances are short.",
+          "hi": "हमें केवल विधानसभा में बताया गया राज्य का औसत मिला, ज़िलेवार कोई सार्वजनिक आँकड़ा नहीं। भिंड, मुरैना और शिवपुरी का खुला डैशबोर्ड दिखाएगा कि कहाँ एंबुलेंस कम हैं।"
+        },
+        "actors": [
+          "government"
+        ],
+        "refs": [
+          "T03"
+        ]
+      }
+    ],
+    "neighbour": [
+      {
+        "title": {
+          "en": "Call even when you have a car",
+          "hi": "गाड़ी हो, तब भी कॉल करें"
+        },
+        "text": {
+          "en": "A call to 108 or 112 can guide the family to the nearest centre that can do an ECG, so a private car goes to the right place first. Guidelines prefer an ambulance.",
+          "hi": "108 या 112 पर कॉल करने से परिवार को सबसे नज़दीकी ECG वाले केंद्र का रास्ता मिल सकता है, ताकि निजी गाड़ी पहले सही जगह जाए। दिशानिर्देश एंबुलेंस को बेहतर मानते हैं।"
+        },
+        "actors": [
+          "government",
+          "community"
+        ],
+        "refs": [
+          "C24",
+          "P07"
+        ]
+      }
+    ],
+    "chc": [
+      {
+        "title": {
+          "en": "Free clot-dissolving injection at every spoke",
+          "hi": "हर स्पोक केंद्र पर मुफ़्त थक्का घोलने वाला इंजेक्शन"
+        },
+        "text": {
+          "en": "Punjab's Mission AMRIT, which began statewide in July 2025, gives district and sub-divisional hospitals the injection free. In its pilot, 583 of 1,305 heart attack patients identified were treated at district facilities. Karnataka and Uttar Pradesh do the same.",
+          "hi": "पंजाब का मिशन अमृत, जो जुलाई 2025 में पूरे राज्य में शुरू हुआ, ज़िला और उप-मंडल अस्पतालों को यह इंजेक्शन मुफ़्त देता है। पायलट में पहचाने गए 1,305 हार्ट अटैक मरीज़ों में से 583 का इलाज ज़िला स्तर पर हुआ। कर्नाटक और उत्तर प्रदेश भी ऐसा करते हैं।"
+        },
+        "actors": [
+          "government"
+        ],
+        "refs": [
+          "P01",
+          "P02",
+          "P12",
+          "T08"
+        ]
+      },
+      {
+        "title": {
+          "en": "A cardiologist on the phone, in minutes",
+          "hi": "कुछ ही मिनटों में फ़ोन पर हृदय रोग विशेषज्ञ"
+        },
+        "text": {
+          "en": "In Punjab, doctors at small hospitals send the ECG to a WhatsApp group of hub cardiologists, who advise treatment. The national guideline already recommends ECG transmission through e-Sanjeevani, which links over 1.4 lakh health centres to hubs.",
+          "hi": "पंजाब में छोटे अस्पतालों के डॉक्टर ECG को हब के हृदय रोग विशेषज्ञों के व्हाट्सऐप ग्रुप में भेजते हैं, जो इलाज की सलाह देते हैं। राष्ट्रीय दिशानिर्देश पहले से ही ई-संजीवनी से ECG भेजने की सलाह देते हैं, जो 1.4 लाख से ज़्यादा स्वास्थ्य केंद्रों को हब से जोड़ता है।"
+        },
+        "actors": [
+          "government",
+          "hospitals",
+          "private"
+        ],
+        "refs": [
+          "P01",
+          "P05",
+          "P06"
+        ]
+      },
+      {
+        "title": {
+          "en": "Faster reading with AI-assisted ECG",
+          "hi": "AI की मदद से ECG की तेज़ जाँच"
+        },
+        "text": {
+          "en": "Karnataka linked 86 rural hospitals to cardiac hubs with connected ECG machines and telecardiology. Time to treatment at the hospital fell to about 13 minutes, and heart attack deaths in the programme fell from 20.2% to 16.1%.",
+          "hi": "कर्नाटक ने 86 ग्रामीण अस्पतालों को जुड़े हुए ECG मशीनों और टेली-कार्डियोलॉजी से हृदय हब से जोड़ा। अस्पताल में इलाज शुरू होने का समय घटकर लगभग 13 मिनट रह गया, और कार्यक्रम में हार्ट अटैक से मौतें 20.2% से घटकर 16.1% हुईं।"
+        },
+        "actors": [
+          "government",
+          "private",
+          "hospitals"
+        ],
+        "refs": [
+          "P03"
+        ]
+      },
+      {
+        "title": {
+          "en": "Funding route already exists",
+          "hi": "पैसे का रास्ता पहले से मौजूद है"
+        },
+        "text": {
+          "en": "Haryana's tele-ECG network is funded through the national non-communicable disease programme (NP-NCD) in its 2026-27 plan. Madhya Pradesh can request the same in its own state plan.",
+          "hi": "हरियाणा का टेली-ECG नेटवर्क राष्ट्रीय गैर-संचारी रोग कार्यक्रम (NP-NCD) की 2026-27 योजना से चलता है। मध्य प्रदेश भी अपनी राज्य योजना में यही माँग सकता है।"
+        },
+        "actors": [
+          "government"
+        ],
+        "refs": [
+          "P04"
+        ]
+      }
+    ],
+    "dh_early": [
+      {
+        "title": {
+          "en": "Know the stock before you drive",
+          "hi": "निकलने से पहले स्टॉक की जानकारी"
+        },
+        "text": {
+          "en": "A simple shared stock list of the injection at each hospital, visible to 108 dispatchers, would send ambulances where treatment is waiting. Karnataka bought the injections centrally for all its spoke hospitals.",
+          "hi": "हर अस्पताल में इंजेक्शन के स्टॉक की एक साझा सूची, जो 108 डिस्पैच टीम देख सके, एंबुलेंस को वहाँ भेजेगी जहाँ इलाज तैयार है। कर्नाटक ने अपने सभी स्पोक अस्पतालों के लिए इंजेक्शन केंद्रीय रूप से ख़रीदे।"
+        },
+        "actors": [
+          "government",
+          "private"
+        ],
+        "refs": [
+          "P12",
+          "ASSUMPTION"
+        ]
+      },
+      {
+        "title": {
+          "en": "Send the records ahead",
+          "hi": "रिकॉर्ड पहले ही भेज दें"
+        },
+        "text": {
+          "en": "The national digital health mission (ABDM) lets a patient's records move between hospitals with consent. The Gwalior team could see the ECG and the injection time before the ambulance arrives.",
+          "hi": "राष्ट्रीय डिजिटल स्वास्थ्य मिशन (ABDM) सहमति से मरीज़ के रिकॉर्ड एक अस्पताल से दूसरे तक पहुँचाता है। एंबुलेंस पहुँचने से पहले ग्वालियर की टीम ECG और इंजेक्शन का समय देख सकती है।"
+        },
+        "actors": [
+          "government",
+          "hospitals",
+          "private"
+        ],
+        "refs": [
+          "P14"
+        ]
+      }
+    ],
+    "dh_neighbour": "dh_early",
+    "gwalior_pci": [
+      {
+        "title": {
+          "en": "Make the medical college a 24-hour hub",
+          "hi": "मेडिकल कॉलेज को 24 घंटे का हब बनाएँ"
+        },
+        "text": {
+          "en": "Gwalior's government medical college is one of six in the state chosen for super-speciality services. Linking it as a hub to every district hospital in the Chambal region is the step that turns a long drive into a planned transfer.",
+          "hi": "ग्वालियर का सरकारी मेडिकल कॉलेज राज्य के उन छह कॉलेजों में है जिन्हें सुपर-स्पेशियलिटी सेवाओं के लिए चुना गया है। इसे चंबल क्षेत्र के हर ज़िला अस्पताल के हब के रूप में जोड़ना लंबे सफ़र को एक योजनाबद्ध ट्रांसफ़र में बदल देगा।"
+        },
+        "actors": [
+          "government",
+          "hospitals"
+        ],
+        "refs": [
+          "T24"
+        ]
+      }
+    ],
+    "gwalior_car": "gwalior_pci",
+    "road_late": [
+      {
+        "title": {
+          "en": "No family should have to choose a jeep",
+          "hi": "किसी परिवार को जीप चुनने की मजबूरी न हो"
+        },
+        "text": {
+          "en": "Most of the fixes above would have reached Ramesh hours earlier: a known number to call, an ECG close to home, and a free injection at the nearest hospital.",
+          "hi": "ऊपर बताए ज़्यादातर बदलाव रमेश तक घंटों पहले पहुँच जाते: बुलाने के लिए जाना-पहचाना नंबर, घर के पास ECG, और सबसे नज़दीकी अस्पताल में मुफ़्त इंजेक्शन।"
+        },
+        "actors": [
+          "government",
+          "community"
+        ],
+        "refs": [
+          "P01",
+          "P04"
+        ]
+      }
+    ],
+    "gwalior_hospital": [
+      {
+        "title": {
+          "en": "No card in hand? Treatment should still start",
+          "hi": "हाथ में कार्ड नहीं? फिर भी इलाज शुरू होना चाहिए"
+        },
+        "text": {
+          "en": "Ayushman rules say a government photo ID need not be insisted on in an emergency. The hospital gets a telephone patient ID from the call centre, and the family shows proof before discharge. Helpline: 14555.",
+          "hi": "आयुष्मान के नियमों के अनुसार आपात स्थिति में सरकारी फ़ोटो पहचान पत्र पर ज़ोर नहीं दिया जाना चाहिए। अस्पताल कॉल सेंटर से टेलीफ़ोन पेशेंट आईडी लेता है, और परिवार छुट्टी से पहले प्रमाण दिखाता है। हेल्पलाइन: 14555।"
+        },
+        "actors": [
+          "government",
+          "hospitals"
+        ],
+        "refs": [
+          "P09",
+          "F03"
+        ]
+      },
+      {
+        "title": {
+          "en": "Check eligibility before the emergency",
+          "hi": "आपात स्थिति से पहले पात्रता जाँचें"
+        },
+        "text": {
+          "en": "Families can check eligibility today at any government hospital or on 14555. Health workers can help households get their Ayushman card made in advance.",
+          "hi": "परिवार आज ही किसी सरकारी अस्पताल में या 14555 पर पात्रता जाँच सकते हैं। स्वास्थ्य कर्मी घरों का आयुष्मान कार्ड पहले से बनवाने में मदद कर सकते हैं।"
+        },
+        "actors": [
+          "government",
+          "community"
+        ],
+        "refs": [
+          "F03"
+        ]
+      }
+    ]
+  },
+  "better_route": {
+    "label": {
+      "en": "Same night, better system",
+      "hi": "वही रात, बेहतर व्यवस्था"
+    },
+    "intro": {
+      "en": "Now replay Ramesh's night in a district that has what Punjab, Karnataka and Uttar Pradesh have already built. Every step below exists somewhere in India today. As far as we found, it does not yet exist together in Madhya Pradesh. Times are illustrative.",
+      "hi": "अब रमेश की वही रात ऐसे ज़िले में दोबारा देखें जहाँ वह सब है जो पंजाब, कर्नाटक और उत्तर प्रदेश पहले ही बना चुके हैं। नीचे का हर क़दम आज भारत में कहीं न कहीं मौजूद है। जहाँ तक हमें पता चला, मध्य प्रदेश में यह सब अभी एक साथ नहीं है। समय अनुमानित हैं।"
+    },
+    "steps": [
+      {
+        "clock_min": 5,
+        "clock_label": {
+          "en": "11:45 pm",
+          "hi": "रात 11:45"
+        },
+        "title": {
+          "en": "Kamla knows the signs",
+          "hi": "कमला लक्षण पहचानती है"
+        },
+        "text": {
+          "en": "The health officer at the village Arogya Mandir had told every household: chest pain with sweating is not gas. Kamla presses the button on the 112 app. Their location goes with the call.",
+          "hi": "गाँव के आरोग्य मंदिर की स्वास्थ्य अधिकारी ने हर घर को बताया था: पसीने के साथ सीने का दर्द गैस नहीं है। कमला 112 ऐप का बटन दबाती है। उनकी लोकेशन कॉल के साथ चली जाती है।"
+        },
+        "refs": [
+          "P15",
+          "P07"
+        ]
+      },
+      {
+        "clock_min": 30,
+        "clock_label": {
+          "en": "12:10 am",
+          "hi": "रात 12:10"
+        },
+        "title": {
+          "en": "The ambulance is on the map",
+          "hi": "एंबुलेंस नक़्शे पर है"
+        },
+        "text": {
+          "en": "An SMS shows the driver's number and the arrival time. The nearest ambulance reaches them in 25 minutes, the state's own stated average for rural calls.",
+          "hi": "एक SMS में ड्राइवर का नंबर और पहुँचने का समय दिखता है। सबसे नज़दीकी एंबुलेंस 25 मिनट में पहुँचती है, जो ग्रामीण कॉल के लिए राज्य का ख़ुद बताया गया औसत है।"
+        },
+        "refs": [
+          "P08",
+          "T03"
+        ]
+      },
+      {
+        "clock_min": 55,
+        "clock_label": {
+          "en": "12:35 am",
+          "hi": "रात 12:35"
+        },
+        "title": {
+          "en": "ECG read in minutes",
+          "hi": "कुछ मिनटों में ECG की रिपोर्ट"
+        },
+        "text": {
+          "en": "At the health centre, the ECG goes straight to a cardiologist at the Gwalior hub. The reply comes back: major heart attack, give the injection.",
+          "hi": "स्वास्थ्य केंद्र पर ECG सीधे ग्वालियर हब के हृदय रोग विशेषज्ञ तक जाता है। जवाब आता है: बड़ा हार्ट अटैक है, इंजेक्शन दें।"
+        },
+        "refs": [
+          "P01",
+          "P04",
+          "P05"
+        ]
+      },
+      {
+        "clock_min": 70,
+        "clock_label": {
+          "en": "12:50 am",
+          "hi": "रात 12:50"
+        },
+        "title": {
+          "en": "Free injection, close to home",
+          "hi": "घर के पास मुफ़्त इंजेक्शन"
+        },
+        "text": {
+          "en": "The injection is in the centre's fridge, supplied free by the state. Ramesh gets it 70 minutes after the pain began, instead of about two hours, or more than seven.",
+          "hi": "इंजेक्शन केंद्र के फ़्रिज में है, राज्य ने मुफ़्त दिया है। रमेश को दर्द शुरू होने के 70 मिनट बाद इंजेक्शन मिल जाता है, लगभग दो घंटे या सात घंटे से ज़्यादा बाद नहीं।"
+        },
+        "refs": [
+          "P01",
+          "P12"
+        ]
+      },
+      {
+        "clock_min": 160,
+        "clock_label": {
+          "en": "2:20 am",
+          "hi": "रात 2:20"
+        },
+        "title": {
+          "en": "Expected in Gwalior",
+          "hi": "ग्वालियर में पहले से ख़बर"
+        },
+        "text": {
+          "en": "The hub already has his ECG and records. The Ayushman desk starts his case with a telephone patient ID, so no one asks for documents at the door.",
+          "hi": "हब के पास पहले से उसका ECG और रिकॉर्ड हैं। आयुष्मान डेस्क टेलीफ़ोन पेशेंट आईडी से केस शुरू कर देता है, इसलिए दरवाज़े पर कोई काग़ज़ नहीं माँगता।"
+        },
+        "refs": [
+          "P14",
+          "P09"
+        ]
+      }
+    ],
+    "outcome": {
+      "en": "Of 1,000 people who get the clot-dissolving drug within 1 to 2 hours, about 37 more survive than without it. In Ramesh's first night, the same injection came at 2 hours at best, or after 7.",
+      "hi": "जिन 1,000 लोगों को 1 से 2 घंटे में थक्का घोलने वाली दवा मिलती है, उनमें से लगभग 37 और लोग बचते हैं। रमेश की पहली रात में यही इंजेक्शन ज़्यादा से ज़्यादा 2 घंटे पर, या 7 घंटे बाद मिला।",
+      "refs": [
+        "C17"
+      ]
+    }
+  },
+  "playbook": {
+    "title": {
+      "en": "Who can change Ramesh's route",
+      "hi": "रमेश का रास्ता कौन बदल सकता है"
+    },
+    "groups": [
+      {
+        "actor": "government",
+        "items": [
+          {
+            "en": "Start a statewide heart attack hub-and-spoke programme, with medical colleges as hubs and CHCs and district hospitals as spokes, as Punjab, Karnataka and Uttar Pradesh have.",
+            "hi": "पंजाब, कर्नाटक और उत्तर प्रदेश की तरह राज्यव्यापी हार्ट अटैक हब-एंड-स्पोक कार्यक्रम शुरू करें, जिसमें मेडिकल कॉलेज हब हों और CHC व ज़िला अस्पताल स्पोक।",
+            "refs": [
+              "P01",
+              "P03",
+              "T08"
+            ]
+          },
+          {
+            "en": "Supply the clot-dissolving injection free to every spoke and track stock centrally.",
+            "hi": "हर स्पोक को थक्का घोलने वाला इंजेक्शन मुफ़्त दें और स्टॉक की निगरानी केंद्रीय रूप से करें।",
+            "refs": [
+              "P12",
+              "P05"
+            ]
+          },
+          {
+            "en": "Fund tele-ECG at CHCs and PHCs through the NP-NCD state plan.",
+            "hi": "NP-NCD राज्य योजना के ज़रिए CHC और PHC में टेली-ECG के लिए पैसा दें।",
+            "refs": [
+              "P04"
+            ]
+          },
+          {
+            "en": "Link Dial 112 with 108, send callers a live tracking link, and publish district response times.",
+            "hi": "डायल 112 को 108 से जोड़ें, कॉल करने वालों को लाइव ट्रैकिंग लिंक भेजें, और ज़िलेवार पहुँचने का समय सार्वजनिक करें।",
+            "refs": [
+              "P07",
+              "P08",
+              "T03"
+            ]
+          }
+        ]
+      },
+      {
+        "actor": "hospitals",
+        "items": [
+          {
+            "en": "Run a 24-hour cardiology hub line that answers spoke hospitals within minutes.",
+            "hi": "24 घंटे की हृदय रोग हब लाइन चलाएँ जो स्पोक अस्पतालों को कुछ ही मिनटों में जवाब दे।",
+            "refs": [
+              "P01"
+            ]
+          },
+          {
+            "en": "Accept emergency Ayushman patients on a telephone patient ID and sort paperwork after treatment begins.",
+            "hi": "आपात आयुष्मान मरीज़ों को टेलीफ़ोन पेशेंट आईडी पर भर्ती करें और काग़ज़ी काम इलाज शुरू होने के बाद करें।",
+            "refs": [
+              "P09"
+            ]
+          },
+          {
+            "en": "Train nurses and medical officers at spokes in ECG and thrombolysis.",
+            "hi": "स्पोक केंद्रों की नर्सों और चिकित्सा अधिकारियों को ECG और थक्का घोलने के इलाज का प्रशिक्षण दें।",
+            "refs": [
+              "P05"
+            ]
+          }
+        ]
+      },
+      {
+        "actor": "private",
+        "items": [
+          {
+            "en": "Offer tele-ECG and AI-assisted reporting to government facilities at public prices, as a private partner does in Haryana at ₹89 a test.",
+            "hi": "सरकारी केंद्रों को सरकारी दरों पर टेली-ECG और AI-सहायता वाली रिपोर्टिंग दें, जैसे हरियाणा में एक निजी साझेदार ₹89 प्रति जाँच पर देता है।",
+            "refs": [
+              "P04"
+            ]
+          },
+          {
+            "en": "Build Hindi voice and WhatsApp tools for symptom awareness, and ambulance-tracking links that work on basic phones.",
+            "hi": "लक्षणों की जागरूकता के लिए हिंदी आवाज़ और व्हाट्सऐप टूल बनाएँ, और ऐसे एंबुलेंस ट्रैकिंग लिंक जो साधारण फ़ोन पर चलें।",
+            "refs": [
+              "P08",
+              "ASSUMPTION"
+            ]
+          },
+          {
+            "en": "Connect devices and records to ABDM so a patient's ECG travels with them.",
+            "hi": "उपकरणों और रिकॉर्ड को ABDM से जोड़ें ताकि मरीज़ का ECG उसके साथ जाए।",
+            "refs": [
+              "P14"
+            ]
+          }
+        ]
+      },
+      {
+        "actor": "community",
+        "items": [
+          {
+            "en": "Learn the signs and hands-only CPR; aim for one trained person in every home.",
+            "hi": "लक्षण और केवल हाथों से CPR सीखें; हर घर में एक प्रशिक्षित व्यक्ति का लक्ष्य रखें।",
+            "refs": [
+              "P10"
+            ]
+          },
+          {
+            "en": "Save 108 and 112 in every phone, and check your family's Ayushman eligibility on 14555 today.",
+            "hi": "हर फ़ोन में 108 और 112 सेव करें, और आज ही 14555 पर अपने परिवार की आयुष्मान पात्रता जाँचें।",
+            "refs": [
+              "F03"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,9 @@
+node_modules/
+build/
+research/
+qa/screenshots/
+qa/lighthouse-*.html
+.DS_Store
+REVIEW.md
+qa/lighthouse-*.json
+qa/test-*.txt
