@@ -41,4 +41,11 @@ First text (title) painted at about 2.1 s in both languages. Full start screen w
 
 ## Live site
 
-To be filled after deploy.
+URL: https://aiboypappu-stack.github.io/patients-route/
+
+Route test against the live site (`--one`: one full route and the death route, both languages): all checks passed in 22 s. One flagged line was a font request cancelled when the test navigated away mid-load; all four fonts, the share image and the 404 page were confirmed separately (HTTP 200, 404 for a missing path).
+
+| Live Lighthouse (mobile) | Performance | Accessibility | Best Practices | SEO |
+|---|---|---|---|---|
+| Hindi | 97 | 100 | 100 | 100 |
+| English | 92 | 100 | 100 | 100 |
