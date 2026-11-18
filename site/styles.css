@@ -14,7 +14,7 @@
   color-scheme:light;
 }
 *{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%;scroll-padding-top:72px}
 body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--sans);font-size:18px;line-height:1.6;min-height:100vh;display:flex;flex-direction:column}
 :lang(hi) body,body:lang(hi){line-height:1.7}
 a{color:var(--accent-strong);text-underline-offset:3px}
