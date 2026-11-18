@@ -1,4 +1,4 @@
-/* The Patient's Route · मरीज़ का रास्ता
+/* The Patient's Route · इलाज तक का सफ़र
    Vanilla JS, no build step. All story text comes from journey.json.
    UI text added by this file lives in the `ui` dictionary below. */
 (function () {
@@ -254,6 +254,10 @@
   });
 
   // ---------- small helpers ----------
+  function art(kind, arg) {
+    var A = window.CrayonArt;
+    try { return A && A[kind] ? A[kind](arg) : ''; } catch (e) { return ''; }
+  }
   function duration(min) {
     var h = Math.floor(min / 60), m = min % 60, parts = [];
     if (h) parts.push(U('hours', { h: h }));
@@ -423,12 +427,11 @@
     t = t.replace(/108/, '<a href="tel:108">108</a>').replace(/112/, '<a href="tel:112">112</a>');
     return '<div class="emergency" role="note">' + t + '</div>';
   }
-  var ILLO = '<svg class="illo" viewBox="0 0 360 74" aria-hidden="true"><g fill="none" stroke="#22190D" stroke-width="2.4" stroke-linejoin="round"><path d="M14 40 34 24l20 16v24H14z" fill="#FFFDF8"/><path d="M28 64V50h12v14"/><path d="M290 22h52v42h-52z" fill="#FFFDF8"/><path d="M316 32v14M309 39h14" stroke="#D4502A" stroke-width="3.2" stroke-linecap="round"/><path d="M304 64V54h24v10"/></g><path d="M64 58H280" stroke="#D4502A" stroke-width="3" stroke-dasharray="2 9" stroke-linecap="round"/><g transform="translate(150 38)"><rect x="0" y="4" width="40" height="18" rx="4" fill="#FFFDF8" stroke="#22190D" stroke-width="2.2"/><path d="M40 10h9l6 7v5H40z" fill="#FFFDF8" stroke="#22190D" stroke-width="2.2" stroke-linejoin="round"/><circle cx="10" cy="24" r="4" fill="#22190D"/><circle cx="45" cy="24" r="4" fill="#22190D"/><path d="M20 8v10M15 13h10" stroke="#D4502A" stroke-width="2.6" stroke-linecap="round"/></g><text x="172" y="28" text-anchor="middle" font-size="15" font-weight="700" fill="#5C5145" font-family="Mukta,sans-serif">80 km</text></svg>';
 
   function startScreen() {
     var m = J.meta;
     return emergencyHtml() +
-      '<h1 class="bigtitle">' + esc(T(m.title)) + '</h1>' + ILLO +
+      '<h1 class="bigtitle">' + esc(T(m.title)) + '</h1>' + art('start') +
       '<p class="lead">' + esc(T(m.subtitle)) + '</p>' +
       '<p class="byline">' + esc(T(m.byline)) + '</p>' +
       '<div class="card"><p>' + esc(T(m.fiction_note)) + '</p></div>' +
@@ -441,6 +444,7 @@
     if (!n) return startScreen();
     var h = '';
     if (n.clock_min != null) h += clockHtml(n.clock_min, n.clock_label);
+    h += art('node', id);
     h += '<h2 class="scene">' + esc(T(n.scene)) + '</h2><div class="prose">' + paras(T(n.text)) + '</div>';
     (n.facts || []).forEach(function (f) { h += factHtml(f, n.clock_min); });
     h += '<div class="stack">' + n.choices.map(function (c, i) {
@@ -503,6 +507,7 @@
     if (!e) return startScreen();
     var death = key === 'death';
     var h = '<section class="ending' + (death ? ' quiet' : '') + '" data-ending="' + key + '">';
+    h += art('ending', key);
     h += '<h2 class="ending-title">' + esc(T(e.title)) + '</h2><div class="prose">' + paras(T(e.text)) + '</div>';
     if (typeof e.stat.survivors_per_100 === 'number') {
       h += '<div class="card">' + personGrid(e.stat.survivors_per_100) + '<p class="stat">' + esc(T(e.stat)) + ' ' + refsHtml(e.stat.refs) + '</p></div>';
@@ -527,7 +532,7 @@
   }
 
   function lessonsScreen() {
-    var h = '<h2 class="scene">' + esc(T(J.lessons.title)) + '</h2>';
+    var h = art('lessons') + '<h2 class="scene">' + esc(T(J.lessons.title)) + '</h2>';
     h += '<ol class="lessons">' + J.lessons.items.map(function (it, i) {
       return '<li class="card lesson"><span class="n" aria-hidden="true">' + (i + 1) + '</span><p>' + esc(T(it)) + ' ' + refsHtml(it.refs) + '</p></li>';
     }).join('') + '</ol>';
@@ -554,10 +559,10 @@
     var h = '<span class="illus">' + esc(U('illustrative')) + '</span>';
     var btnNext = function (label) { return '<div class="stack"><button type="button" class="btn btn-primary" data-act="bnext">' + esc(label || U('next')) + '</button></div>'; };
     if (i === 0) {
-      h += '<h2 class="scene">' + esc(T(br.label)) + '</h2><div class="prose">' + paras(T(br.intro)) + '</div>' + btnNext();
+      h += art('better', 0) + '<h2 class="scene">' + esc(T(br.label)) + '</h2><div class="prose">' + paras(T(br.intro)) + '</div>' + btnNext();
     } else if (i <= n) {
       var st = steps[i - 1];
-      h += '<p class="stepn">' + esc(U('stepOf', { i: i, n: n })) + '</p>' + clockHtml(st.clock_min, st.clock_label) +
+      h += '<p class="stepn">' + esc(U('stepOf', { i: i, n: n })) + '</p>' + clockHtml(st.clock_min, st.clock_label) + art('better', i) +
         '<h2 class="scene">' + esc(T(st.title)) + '</h2><div class="prose"><p>' + esc(T(st.text)) + ' ' + refsHtml(st.refs) + '</p></div>' + btnNext();
     } else if (i === n + 1) {
       h += '<h2 class="scene">' + esc(T(br.label)) + '</h2><div class="card fact"><p>' + esc(T(br.outcome)) + ' ' + refsHtml(br.outcome.refs) + '</p></div>' + btnNext(U('seeCompare'));
@@ -584,7 +589,7 @@
   }
 
   function playbookScreen() {
-    var h = '<h2 class="scene">' + esc(T(J.playbook.title)) + '</h2>';
+    var h = art('playbook') + '<h2 class="scene">' + esc(T(J.playbook.title)) + '</h2>';
     J.playbook.groups.forEach(function (g) {
       h += '<section class="pb-group"><h3>' + actorChip(g.actor) + '</h3>' + g.items.map(function (it) {
         return '<div class="card pb-item"><p>' + esc(T(it)) + ' ' + refsHtml(it.refs) + '</p></div>';

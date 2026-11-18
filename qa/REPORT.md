@@ -1,6 +1,6 @@
 # QA report
 
-Date: 18 Nov 2026. Build: journey.json v1.1-draft.
+Date: 18 Nov 2026. Build: journey.json v1.1-draft, Hindi title इलाज तक का सफ़र, crayon drawings added.
 
 ## Journey check (`node scripts/check-journey.mjs`)
 
@@ -25,8 +25,8 @@ Screenshots of every screen in both languages are in `qa/screenshots/` (not comm
 
 | | Transfer |
 |---|---|
-| HTML, CSS, JS, journey.json | 43.6 KB (limit 350 KB) |
-| With fonts | 296.8 KB (limit 600 KB) |
+| HTML, CSS, JS (incl. crayon drawings), journey.json | 47.9 KB (limit 350 KB) |
+| With fonts | 301.2 KB (limit 600 KB) |
 
 ## Slow 3G (2,000 ms latency, 50 KB/s)
 
@@ -36,10 +36,8 @@ First text (title) painted at about 2.1 s in both languages. Full start screen w
 
 | | Performance | Accessibility | Best Practices | SEO |
 |---|---|---|---|---|
-| Hindi | 94 | 100 | 100 | 91 |
-| English | 95 | 100 | 100 | 91 |
-
-SEO 91 locally because the canonical URL is relative until the live address is known; see the live results below.
+| Hindi | 95 | 100 | 100 | 100 |
+| English | 94 | 100 | 100 | 100 |
 
 ## Live site
 

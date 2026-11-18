@@ -4,7 +4,7 @@
 @font-face{font-family:Tiro;src:url(../site/fonts/tiro-400.woff2)}
 html,body{margin:0}
 body{width:1200px;height:630px;background:#F6EEE1;color:#22190D;font-family:M;box-sizing:border-box;padding:64px 80px;position:relative;overflow:hidden}
-h1{font-family:Tiro;font-weight:400;font-size:104px;line-height:1.25;margin:0}
+h1{font-family:Tiro;font-weight:400;font-size:88px;line-height:1.25;margin:0}
 h2{font-family:Tiro;font-weight:400;font-size:52px;color:#5C5145;margin:0 0 30px}
 p{font-size:46px;font-weight:700;margin:0;line-height:1.4}
 .bar{position:absolute;left:80px;right:80px;bottom:120px;height:26px;border-radius:13px;display:flex;overflow:hidden}
@@ -13,13 +13,15 @@ p{font-size:46px;font-weight:700;margin:0;line-height:1.4}
 .m:after{content:"";position:absolute;left:-11px;top:-26px;width:30px;height:30px;border-radius:50%;background:#D4502A;border:5px solid #F6EEE1}
 .t{position:absolute;bottom:58px;height:40px;left:80px;right:80px;font-size:28px;color:#5C5145;font-weight:700}
 .t span{position:absolute}
-.brand{position:absolute;right:80px;top:70px;font-size:28px;font-weight:700;color:#B8431F}
+.pic{position:absolute;right:80px;top:60px;width:340px}.pic svg{width:340px;height:auto;border-radius:22px;display:block}
+.brand{position:absolute;right:80px;top:236px;font-size:28px;font-weight:700;color:#B8431F}
 </style></head><body>
-<div class="brand">Beyond Metros</div>
-<h1>मरीज़ का रास्ता</h1>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs><filter id="crayon" x="-4%" y="-4%" width="108%" height="108%" color-interpolation-filters="sRGB"><feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="4" result="w"/><feDisplacementMap in="SourceGraphic" in2="w" scale="3.5" xChannelSelector="R" yChannelSelector="G" result="d"/><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="9" result="g"/><feColorMatrix in="g" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1.7 0 0 0 1.75" result="ga"/><feComposite in="d" in2="ga" operator="in"/></filter></defs></svg><div class="pic" id="pic"></div><div class="brand">Beyond Metros</div>
+<h1>इलाज तक का सफ़र</h1>
 <h2>The Patient's Route</h2>
 <p>रात में हार्ट अटैक, शहर से 80 किलोमीटर दूर।</p>
 <div class="bar"><span style="width:12.5%;background:#EFE5D3"></span><span style="width:12.5%;background:#F2DCC4"></span><span style="width:12.5%;background:#F2D0B4"></span><span style="width:37.5%;background:#EEC3A2"></span><span style="width:25%;background:#E8B592"></span></div>
 <div class="m"></div>
 <div class="t"><span style="left:0">0 h</span><span style="left:25%;transform:translateX(-50%)">2 h</span><span style="right:0">8 h</span></div>
+<script src="../site/art.js"></script><script>document.getElementById("pic").innerHTML=CrayonArt.ending("early_lysis")</script>
 </body></html>

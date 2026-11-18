@@ -3,22 +3,22 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>मरीज़ का रास्ता · The Patient's Route</title>
+<title>इलाज तक का सफ़र · The Patient's Route</title>
 <meta name="description" content="रात में हार्ट अटैक, शहर से 80 किलोमीटर दूर। हर फ़ैसले में समय और पैसा लगता है। A heart attack at night, 80 km from the city. A bilingual choose-your-path story with sourced facts.">
 <meta name="theme-color" content="#F6EEE1">
 <link rel="canonical" href="https://aiboypappu-stack.github.io/patients-route/">
 <meta property="og:url" content="https://aiboypappu-stack.github.io/patients-route/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="मरीज़ का रास्ता · The Patient's Route">
+<meta property="og:title" content="इलाज तक का सफ़र · The Patient's Route">
 <meta property="og:description" content="रात में हार्ट अटैक, शहर से 80 किलोमीटर दूर। क्या आप रमेश को समय पर इलाज तक पहुँचा पाएँगे? A heart attack at night, 80 km from the city. Can you get Ramesh to treatment in time?">
 <meta property="og:image" content="https://aiboypappu-stack.github.io/patients-route/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="मरीज़ का रास्ता · The Patient's Route. रात में हार्ट अटैक, शहर से 80 किलोमीटर दूर।">
+<meta property="og:image:alt" content="इलाज तक का सफ़र · The Patient's Route. रात में हार्ट अटैक, शहर से 80 किलोमीटर दूर।">
 <meta property="og:locale" content="hi_IN">
 <meta property="og:locale:alternate" content="en_IN">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="मरीज़ का रास्ता · The Patient's Route">
+<meta name="twitter:title" content="इलाज तक का सफ़र · The Patient's Route">
 <meta name="twitter:description" content="रात में हार्ट अटैक, शहर से 80 किलोमीटर दूर। A heart attack at night, 80 km from the city.">
 <meta name="twitter:image" content="https://aiboypappu-stack.github.io/patients-route/og-image.png">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -35,13 +35,15 @@ dialog:not([open]){display:none}
 </style>
 <link rel="stylesheet" href="styles.css" id="css" media="print" onload="this.media='all'">
 <noscript><link rel="stylesheet" href="styles.css"></noscript>
+<script src="art.js" defer></script>
 <script src="app.js" defer></script>
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs><filter id="crayon" x="-4%" y="-4%" width="108%" height="108%" color-interpolation-filters="sRGB"><feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="4" result="w"/><feDisplacementMap in="SourceGraphic" in2="w" scale="3.5" xChannelSelector="R" yChannelSelector="G" result="d"/><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="9" result="g"/><feColorMatrix in="g" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1.7 0 0 0 1.75" result="ga"/><feComposite in="d" in2="ga" operator="in"/></filter></defs></svg>
 <a class="skip" href="#screen" id="skip">कहानी पर जाएँ · Skip to story</a>
 <header class="topbar">
   <div class="topbar-in">
-    <span class="brand" id="brand">मरीज़ का रास्ता</span>
+    <span class="brand" id="brand">इलाज तक का सफ़र</span>
     <div class="langtoggle" role="group" aria-label="भाषा · Language" id="langtoggle" hidden>
       <button type="button" data-lang="hi" lang="hi">हिं</button>
       <button type="button" data-lang="en" lang="en">EN</button>
@@ -50,7 +52,7 @@ dialog:not([open]){display:none}
 </header>
 <main id="screen" class="screen" aria-live="polite" tabindex="-1">
   <section class="langpick" id="static-lang">
-    <h1 class="bigtitle"><span lang="hi">मरीज़ का रास्ता</span><span class="sub" lang="en">The Patient's Route</span></h1>
+    <h1 class="bigtitle"><span lang="hi">इलाज तक का सफ़र</span><span class="sub" lang="en">The Patient's Route</span></h1>
     <p class="lead"><span lang="hi">अपनी भाषा चुनें</span> · <span lang="en">Choose your language</span></p>
     <div class="stack">
       <a class="btn btn-lang" href="?lang=hi" lang="hi" data-lang="hi">हिंदी</a>
@@ -73,7 +75,7 @@ dialog:not([open]){display:none}
   </div>
 </dialog>
 <script>
-(function(){var m=/[?&]lang=(hi|en)\b/.exec(location.search);if(!m&&!location.hash)return;var l=m?m[1]:'hi';document.documentElement.lang=l;var s=document.getElementById('static-lang');s.innerHTML='<h1 class="bigtitle">'+(l==='en'?"The Patient's Route":'मरीज़ का रास्ता')+'</h1><p class="lead">'+(l==='en'?'Loading the story':'कहानी लोड हो रही है')+'</p>';document.getElementById('screen').setAttribute('aria-busy','true');})();
+(function(){var m=/[?&]lang=(hi|en)\b/.exec(location.search);if(!m&&!location.hash)return;var l=m?m[1]:'hi';document.documentElement.lang=l;var s=document.getElementById('static-lang');s.innerHTML='<h1 class="bigtitle">'+(l==='en'?"The Patient's Route":'इलाज तक का सफ़र')+'</h1><p class="lead">'+(l==='en'?'Loading the story':'कहानी लोड हो रही है')+'</p>';document.getElementById('screen').setAttribute('aria-busy','true');})();
 </script>
 <noscript><p class="noscript" lang="hi">यह कहानी चलाने के लिए JavaScript चालू करें।</p><p class="noscript" lang="en">Please turn on JavaScript to play this story.</p></noscript>
 </body>

@@ -1,4 +1,4 @@
-# The Patient's Route · मरीज़ का रास्ता
+# The Patient's Route · इलाज तक का सफ़र
 
 A bilingual (Hindi and English) choose-your-path story about a heart attack at night in a fictional village in Bhind district, 80 km from Gwalior. Every number links to its source. A static site: no login, no server, no trackers, no cookies.
 
